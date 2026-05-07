@@ -260,12 +260,13 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		
 		//counting how much there are factons units compared to every unit
 		int playersCount = m_PlayerManager.GetPlayerCount();
+		
 		foreach (FactionKey factionKey, int count: playables)
 		{	
 			desiredratio[factionKey] = count / playablesammount; 
 		}
 		//clamping avaivable over the ratio slots in proportion to current player count to ensure balance for small scenarios
-		int adjfactionsbalance = Math.Clamp(m_iFactionsBalance,1,(playersCount / 10));
+		//int adjfactionsbalance = Math.Clamp(m_iFactionsBalance,1,(playersCount / 10));
 		
 		if (players[factionKeyPlayer] < 1)
 		{
@@ -273,8 +274,51 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return true;
 		}
 		//check if that faction with a new player wouldnt get too many players
-		float ratio = (players[factionKeyPlayer] + 1 - adjfactionsbalance) / playersCount;
+		float ratio = (players[factionKeyPlayer] + 1 - m_iFactionsBalance) / playersCount;
 		
 		return ratio <= desiredratio[factionKeyPlayer];
 	}
+	
+	
+	void BroadcastPolyZoneFactionChange(IEntity targetEntity, FactionKey factionKey, bool visible)
+	{
+		//Print("-2-BroadcastPolyZoneFactionChange called, entity=" + targetEntity + ", name=" + targetEntity.GetName() + ", factionKey=" + factionKey + ", visible=" + visible);
+		if (!Replication.IsServer())
+		{
+			//Print("-2-ERROR: BroadcastPolyZoneFactionChange called on client!");
+			return;
+		}
+
+		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
+		if (polyZone)
+			polyZone.ApplyFactionVisiblity(factionKey, visible);
+		//else
+			//Print("-2-ERROR: polyZone is null on entity=" + targetEntity);
+
+		string entityName = targetEntity.GetName();
+		//Print("-2-entityName=" + entityName);
+		Rpc(RPC_BroadcastPolyZoneFactionChange, entityName, factionKey, visible);
+	}
+
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	protected void RPC_BroadcastPolyZoneFactionChange(string entityName, FactionKey factionKey, bool visible)
+	{
+		//Print("-3-RPC_BroadcastPolyZoneFactionChange received, entityName=" + entityName + ", factionKey=" + factionKey + ", visible=" + visible);
+		IEntity targetEntity = GetGame().GetWorld().FindEntityByName(entityName);
+		//Print("-3-Found entity by name: " + targetEntity);
+		if (!targetEntity)
+		{
+			//Print("-3-ERROR: targetEntity is null for name=" + entityName);
+			return;
+		}
+
+		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
+		//Print("-3-polyZone component: " + polyZone);
+		if (polyZone)
+			polyZone.ApplyFactionVisiblity(factionKey, visible);
+		else
+			//Print("-3-ERROR: polyZone is null on found entity");
+	}
+	
+
 };
