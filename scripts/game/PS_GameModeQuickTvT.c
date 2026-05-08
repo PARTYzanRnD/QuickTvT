@@ -251,12 +251,12 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return;
 
 		Print(string.Format("[DefendFlag] OnPlayerConnected playerId=%1 (UID deferred)", playerId));
-		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 3000, false, playerId);
+		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 16000, false, playerId);
 	}
 
 	void SendDefendFlagToPlayer(int playerId)
 	{
-		string uid = GetGame().GetBackendApi().GetPlayerUID(playerId);
+		string uid = GetGame().GetBackendApi().GetPlayerIdentityId(playerId);
 		bool flagged = m_mDefendFlagPlayers.Contains(uid);
 		Print(string.Format("[DefendFlag] SendDefendFlagToPlayer playerId=%1 uid=%2 flagged=%3", playerId, uid, flagged));
 		Rpc(RPC_SetDefendFlagToPlayer, playerId, flagged);
