@@ -1,6 +1,7 @@
 modded class PS_PlayableControllerComponent
 {
 	bool m_bIsDefendFlagged = false;
+	FactionKey m_sFlaggedDefendFactionKey;
 
 	void SendQTvTTimerCommand(PS_ETimerCommand command, int value)
 	{

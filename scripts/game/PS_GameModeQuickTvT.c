@@ -157,6 +157,8 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		}
 	}
 
+	protected FactionKey m_sCurrentDefendFactionKey;
+
 	void FlagDefendFactionPlayers()
 	{
 		if (!Replication.IsServer())
@@ -168,6 +170,7 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return;
 
 		FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
+		m_sCurrentDefendFactionKey = defendFactionKey;
 		array<int> playerIds = {};
 		m_PlayerManager.GetPlayers(playerIds);
 		Print(string.Format("[DefendFlag] FlagDefendFactionPlayers - defendFactionKey: %1, playerCount: %2", defendFactionKey, playerIds.Count()));
@@ -251,19 +254,20 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return;
 
 		Print(string.Format("[DefendFlag] OnPlayerConnected playerId=%1 (UID deferred)", playerId));
-		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 16000, false, playerId);
+		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 3000, false, playerId);
 	}
 
 	void SendDefendFlagToPlayer(int playerId)
 	{
-		string uid = GetGame().GetBackendApi().GetPlayerIdentityId(playerId);
+		string uid = GetGame().GetBackendApi().GetPlayerUID(playerId);
 		bool flagged = m_mDefendFlagPlayers.Contains(uid);
-		Print(string.Format("[DefendFlag] SendDefendFlagToPlayer playerId=%1 uid=%2 flagged=%3", playerId, uid, flagged));
-		Rpc(RPC_SetDefendFlagToPlayer, playerId, flagged);
+		FactionKey flaggedDefendFactionKey = m_sCurrentDefendFactionKey;
+		Print(string.Format("[DefendFlag] SendDefendFlagToPlayer playerId=%1 uid=%2 flagged=%3 factionKey=%4", playerId, uid, flagged, flaggedDefendFactionKey));
+		Rpc(RPC_SetDefendFlagToPlayer, playerId, flagged, flaggedDefendFactionKey);
 	}
 
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	protected void RPC_SetDefendFlagToPlayer(int playerId, bool flagged)
+	protected void RPC_SetDefendFlagToPlayer(int playerId, bool flagged, FactionKey factionKey)
 	{
 		PlayerController localPc = GetGame().GetPlayerController();
 		if (!localPc)
@@ -279,7 +283,8 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		if (playableController)
 		{
 			playableController.m_bIsDefendFlagged = flagged;
-			Print(string.Format("[DefendFlag] Set m_bIsDefendFlagged=%1 for local player %2", flagged, localPlayerId));
+			playableController.m_sFlaggedDefendFactionKey = factionKey;
+			Print(string.Format("[DefendFlag] Set m_bIsDefendFlagged=%1 m_sFlaggedDefendFactionKey=%2 for local player %3", flagged, factionKey, localPlayerId));
 		}
 		else
 		{
