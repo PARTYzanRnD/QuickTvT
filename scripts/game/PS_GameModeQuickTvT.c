@@ -157,7 +157,7 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		}
 	}
 
-	protected FactionKey m_sCurrentDefendFactionKey;
+	//protected FactionKey m_sCurrentDefendFactionKey;
 
 	void FlagDefendFactionPlayers()
 	{
@@ -170,7 +170,7 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return;
 
 		FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
-		m_sCurrentDefendFactionKey = defendFactionKey;
+		//m_sCurrentDefendFactionKey = defendFactionKey;
 		array<int> playerIds = {};
 		m_PlayerManager.GetPlayers(playerIds);
 		Print(string.Format("[DefendFlag] FlagDefendFactionPlayers - defendFactionKey: %1, playerCount: %2", defendFactionKey, playerIds.Count()));
@@ -254,14 +254,15 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return;
 
 		Print(string.Format("[DefendFlag] OnPlayerConnected playerId=%1 (UID deferred)", playerId));
-		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 3000, false, playerId);
+		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 16000, false, playerId);
 	}
 
 	void SendDefendFlagToPlayer(int playerId)
 	{
 		string uid = GetGame().GetBackendApi().GetPlayerUID(playerId);
 		bool flagged = m_mDefendFlagPlayers.Contains(uid);
-		FactionKey flaggedDefendFactionKey = m_sCurrentDefendFactionKey;
+		GUB_RandomizeSpawnManager spawnManager = GetRandomizeSpawnManager();
+		FactionKey flaggedDefendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
 		Print(string.Format("[DefendFlag] SendDefendFlagToPlayer playerId=%1 uid=%2 flagged=%3 factionKey=%4", playerId, uid, flagged, flaggedDefendFactionKey));
 		Rpc(RPC_SetDefendFlagToPlayer, playerId, flagged, flaggedDefendFactionKey);
 	}
