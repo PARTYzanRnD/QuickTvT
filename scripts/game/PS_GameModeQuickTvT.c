@@ -168,7 +168,8 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		Print(string.Format("[DefendFlag] FlagDefendFactionPlayers - spawnManager: %1, defendFaction: %2", spawnManager, spawnManager.GetDefendFaction()));
 		if (!spawnManager || !spawnManager.GetDefendFaction())
 			return;
-
+		
+		m_mDefendFlagPlayers.Clear();
 		FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
 		//m_sCurrentDefendFactionKey = defendFactionKey;
 		array<int> playerIds = {};
@@ -233,10 +234,10 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			Print(string.Format("[DefendFlag] IsRestricted - spawnManager=%1, returning false", spawnManager));
 			return false;
 		}
-		FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
-		if (factionKeyPlayer != defendFactionKey)
+		//FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
+		if (factionKeyPlayer != playableController.m_sFlaggedDefendFactionKey)
 		{
-			Print(string.Format("[DefendFlag] IsRestricted - factionKeyPlayer=%1 != defendFactionKey=%2, returning false", factionKeyPlayer, defendFactionKey));
+			Print(string.Format("[DefendFlag] IsRestricted - factionKeyPlayer=%1 != defendFactionKey=%2, returning false", factionKeyPlayer, playableController.m_sFlaggedDefendFactionKey));
 			return false;
 		}
 		int elapsed = m_iSlotsTime - m_iStepTime;
