@@ -32,11 +32,16 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 	
 	[RplProp()]
 	protected int m_iStepTime;
-	
+
+	[RplProp()]
+	protected ref array<int> m_aDefendFlagPlayerIds = {};
+
+	int m_iLastCanJoinFactionPlayerId = -1;
+
 	protected static int m_iMissionNum = 0;
-	
+
 	protected PlayerManager m_PlayerManager;
-	
+
 	protected bool m_bTimerEnabled = true;
 	
 	int GetStepTime()
@@ -105,9 +110,26 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			case SCR_EGameModeState.BRIEFING:
 				m_iStepTime = m_iBriefingTime;
 				break;
-			case SCR_EGameModeState.GAME:
-				m_iStepTime = m_iGameTime + m_iFreezeTime;
-				break;
+		case SCR_EGameModeState.GAME:
+			m_iStepTime = m_iGameTime + m_iFreezeTime;
+			m_aDefendFlagPlayerIds.Clear();
+			if (Replication.IsServer())
+			{
+				GUB_RandomizeSpawnManager spawnManager = GetRandomizeSpawnManager();
+				if (spawnManager && spawnManager.GetDefendFaction())
+				{
+					FactionKey defendFactionKey = spawnManager.GetDefendFaction().m_sFactionKey;
+					array<int> playerIds = {};
+					m_PlayerManager.GetPlayers(playerIds);
+					foreach (int pId : playerIds)
+					{
+						if (m_playableManager.GetPlayerFactionKey(pId) == defendFactionKey)
+							m_aDefendFlagPlayerIds.Insert(pId);
+					}
+				}
+				Replication.BumpMe();
+			}
+			break;
 			case SCR_EGameModeState.DEBRIEFING:
 				m_iStepTime = m_iDebriefingTime;
 				break;
@@ -224,8 +246,32 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 		GetGame().GetCallqueue().Remove(CheckAlive);
 	}
 	
+	bool IsDefendFactionRestricted(int playerId, FactionKey factionKeyPlayer)
+	{
+		if (GetState() != SCR_EGameModeState.SLOTSELECTION)
+			return false;
+		if (!m_aDefendFlagPlayerIds.Contains(playerId))
+			return false;
+		GUB_RandomizeSpawnManager spawnManager = GetRandomizeSpawnManager();
+		if (!spawnManager || !spawnManager.GetDefendFaction())
+			return false;
+		if (factionKeyPlayer != spawnManager.GetDefendFaction().m_sFactionKey)
+			return false;
+		int elapsed = m_iSlotsTime - m_iStepTime;
+		if (elapsed >= 60000)
+			return false;
+		return true;
+	}
+
 	override bool CanJoinFaction(FactionKey factionKeyPlayer, FactionKey currentFaction)
 	{
+		if (m_iLastCanJoinFactionPlayerId >= 0 && IsDefendFactionRestricted(m_iLastCanJoinFactionPlayerId, factionKeyPlayer))
+		{
+			m_iLastCanJoinFactionPlayerId = -1;
+			return false;
+		}
+		m_iLastCanJoinFactionPlayerId = -1;
+
 		if (m_iFactionsBalance == -1)
 			return true;
 		if (factionKeyPlayer == currentFaction)
