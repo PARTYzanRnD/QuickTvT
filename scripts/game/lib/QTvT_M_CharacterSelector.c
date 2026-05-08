@@ -43,17 +43,21 @@ modded class PS_CharacterSelector
 		if (playerId != m_iPlayerId)
 		{
 			PS_GameModeQuickTvT gameModeQuickTvT = PS_GameModeQuickTvT.Cast(GetGame().GetGameMode());
-			if (gameModeQuickTvT && gameModeQuickTvT.IsDefendFactionRestricted(m_iCurrentPlayerId, m_sFactionKey))
+			Print(string.Format("[DefendFlag] OnClicked - m_sFactionKey=%1, m_iCurrentPlayerId=%2, gameModeQuickTvT=%3", m_sFactionKey, m_iCurrentPlayerId, gameModeQuickTvT));
+			if (gameModeQuickTvT)
+			{
+				PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
+				Print(string.Format("[DefendFlag] OnClicked - m_bIsDefendFlagged=%1", localPc.m_bIsDefendFlagged));
+			}
+			if (gameModeQuickTvT && gameModeQuickTvT.IsDefendFactionRestrictedForLocal(m_sFactionKey))
 			{
 				SCR_ChatPanelManager chatPanelManager = SCR_ChatPanelManager.GetInstance();
 				ChatCommandInvoker invoker = chatPanelManager.GetCommandInvoker("lmsg");
-				invoker.Invoke(null, "Уже играли за оборону - низкий приоритет");
+				invoker.Invoke(null, "Уже играли за оборону - подождите минуту");
 				m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
 				AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
 				return;
 			}
-			if (gameModeQuickTvT)
-				gameModeQuickTvT.m_iLastCanJoinFactionPlayerId = m_iCurrentPlayerId;
 
 			if (!CanJoinFaction())
 			{
