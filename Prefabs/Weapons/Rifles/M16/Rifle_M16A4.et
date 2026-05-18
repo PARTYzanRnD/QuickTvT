@@ -1,0 +1,113 @@
+GenericEntity : "{D2C367D173B99BCC}Prefabs/Weapons/Rifles/M4A1/Rifle_M4_RAS.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  MeshObject "{CFBAA4B701F95D69}" {
+   Materials {
+    MaterialAssignClass "{5ED270F55CD7E377}" {
+     SourceMaterial "LP_LOWER_ASSEMBLY"
+     AssignedMaterial "{F30EFA2F3F804801}Assets/Weapons/Rifles/m4a1/Data/LP_LOWER_ASSEMBLY_M16A4.emat"
+    }
+   }
+  }
+  RHS_SGC_RadialMenuComponent "{5E0ED058CD731BC8}" {
+   m_sDisplayName "#RHS-Weapon_M16A4_Name"
+  }
+  SCR_WeaponAttachmentsStorageComponent "{51F080D5CE45A1A2}" {
+   Attributes SCR_ItemAttributeCollection "{51F080D5C64F12C5}" {
+    ItemDisplayName WeaponUIInfo "{5222CB07CFF6712A}" {
+     Name "#RHS-Weapon_M16A4_Name"
+     Description "#RHS-Weapon_M16A4_Description"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    AttachmentSlotComponent "{5E0EEDA2A35B78B4}" {
+     AttachmentSlot InventoryStorageSlot Buffertube {
+      Prefab ""
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA2E5FAA2B6}" {
+     AttachmentSlot InventoryStorageSlot Buttstock {
+      Offset 0 0 0
+      Prefab "{54334C15A8D9BAFB}Prefabs/Weapons/Attachments/Stocks/Stock_M16A4/RHS_M16A4_Buttstock.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA47E3F452D}" {
+     AttachmentSlot InventoryStorageSlot Handguard {
+      Prefab "{AD41E261709947C6}Prefabs/Weapons/Rifles/M16/base_parts/RHS_M16A4_RasUpper.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA5B623AB37}" {
+     AttachmentSlot InventoryStorageSlot Handguard_lower {
+      Prefab "{9001EBB84477A392}Prefabs/Weapons/Rifles/M16/base_parts/RHS_M16A4_RasLower.et"
+     }
+    }
+    AttachmentSlotComponent "{5E0EEDA70372C8BA}" {
+     AttachmentSlot InventoryStorageSlot Barrel {
+      Prefab "{7BAE4B412DFC6E81}Prefabs/Weapons/Rifles/M16/base_parts/RHS_M16_BARREL_20.et"
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE949ECF03E3}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{5EA2BE9573F14F0C}" {
+      Offset 0 0.1115 0.2819
+      InspectionWidgetOffset 0 0.1115 0.2814
+      m_fMaximumPositiveSlideOffset 0.13
+      m_fMaximumNegativeSlideOffset -0.13
+     }
+    }
+    AttachmentSlotComponent "{5EA2BE95B630A07A}" {
+     AttachmentType AttachmentM16A4RailCover "{5EA2BE95B2EB8968}" {
+     }
+    }
+    AttachmentSlotComponent "{61749A66C4BA094E}" {
+     AttachmentSlot InventoryStorageSlot bayonet {
+      Offset 0 -0.0298 0.1241
+      InspectionWidgetOffset 0 0.022 0.6229
+     }
+    }
+    AttachmentSlotComponent "{629ADD50107BFFEA}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD500DE777C8}" {
+      Offset -0.0273 0.0794 0.2813
+      InspectionWidgetOffset -0.0273 0.0794 0.2816
+      m_fMaximumPositiveSlideOffset 0.09
+      m_fMaximumNegativeSlideOffset -0.13
+     }
+    }
+    AttachmentSlotComponent "{629ADD528EE856C1}" {
+     AttachmentSlot RHS_SlidingInventoryStorageSlot "{629ADD52ACAC8DC6}" {
+      Offset 0.0278 0.0819 0.2815
+      InspectionWidgetOffset 0.0278 0.0819 0.282
+      m_fMaximumPositiveSlideOffset 0.09
+      m_fMaximumNegativeSlideOffset -0.13
+     }
+    }
+    AttachmentSlotComponent "{647D57A4E99CBFA3}" {
+     AttachmentSlot InventoryStorageSlot "{647D57BB184D5F9B}" {
+      Offset -0.0006 0.0582 0.3995
+      InspectionWidgetOffset 0 0.0381 0.3888
+     }
+    }
+    MuzzleComponent "{CA6BE4D6B867541F}" {
+     WeaponAimModifiers {
+      RecoilWeaponAimModifier "{5E0ED058CD703F41}" {
+       LinearData RecoilData "{5E0ED058CD703F42}" {
+        "Base Recoil Scale" 2
+       }
+       AngularData RecoilData "{5E0ED058CD703F43}" {
+        "Curve Mins" -1 1 1
+        "Curve Maxs" 1 1.2 1
+        "Base Recoil Scale" 2
+       }
+       TurnOffsetData RecoilData "{5E0ED058CD703F44}" {
+        "Curve Mins" -1.5 2.5 0
+        "Curve Maxs" 1.5 4 0
+        "Base Recoil Scale" 2
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

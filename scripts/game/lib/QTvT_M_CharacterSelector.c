@@ -92,3 +92,97 @@ modded class PS_CharacterSelector
 	}
 
 };
+
+
+/*modded class PS_ContextMenu : SCR_ScriptedWidgetComponent
+{
+	override void ActionKick(int playerId)
+	{
+		if (!PS_PlayersHelper.IsAdminOrServer())
+			return;
+		if (GetGame().GetPlayerController().GetPlayerId() == playerId)
+			return;
+		
+		PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
+		Print(string.Format("[DefendFlag] Onkick - m_bIsDefendFlagged=%1", localPc.m_bIsDefendFlagged));
+		if (localPc.m_bIsDefendFlagged)
+			return;
+		string name = "#PS-ContextAction_Kick";
+		return AddAction(IMAGESET, "kickCommandAlt", name, "",
+			new PS_ContextActionDataPlayer(playerId)
+		).GetOnOnContextAction().Insert(OnActionKick);
+	}
+	override void OnActionKick(PS_ContextAction contextAction, PS_ContextActionDataPlayer contextActionDataPlayer)
+	{
+		PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
+		Print(string.Format("[DefendFlag] Onkick - m_bIsDefendFlagged=%1", localPc.m_bIsDefendFlagged));
+		if (!localPc.m_bIsDefendFlagged)
+		{
+			SCR_UISoundEntity.SoundEvent("SOUND_LOBBY_KICK");
+			PS_PlayableManager.GetPlayableController().KickPlayer(contextActionDataPlayer.GetPlayerId());
+		}
+	}
+	
+	PS_ScriptInvokerOnContextAction ActionFreeSlot(RplId playableId)
+	{
+		PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
+		Print(string.Format("[DefendFlag] Onkick - m_bIsDefendFlagged=%1", localPc.m_bIsDefendFlagged));
+		if (localPc.m_bIsDefendFlagged)
+		{
+			return AddAction(IMAGESET, "kickCommandAlt", "#PS-ContextAction_FreeSlot", "",
+				new PS_ContextActionDataPlayable(playableId)
+			).GetOnOnContextAction();
+		}
+	}*/
+modded class PS_CharacterSelector : SCR_ButtonComponent
+{
+	override void OpenContext()
+	{
+		string playerName = PS_PlayableManager.GetInstance().GetPlayerName(m_iPlayerId);
+		PS_ContextMenu contextMenu = PS_ContextMenu.CreateContextMenuOnMousePosition(m_CoopLobby.GetRootWidget(), playerName);
+		contextMenu.ActionOpenInventory(m_iPlayableId).Insert(OnActionOpenInventory);
+		
+		if (m_iPlayerId > 0)
+		{
+			if (PS_PlayersHelper.IsAdminOrServer())
+			{
+				contextMenu.ActionGetArmaId(m_iPlayerId);
+			}
+			if (m_iPlayerId != m_iCurrentPlayerId)
+			{
+				PermissionState mute = PermissionState.DISALLOWED;
+				SocialComponent socialComp = SocialComponent.Cast(GetGame().GetPlayerController().FindComponent(SocialComponent));
+				if (socialComp.IsMuted(m_iPlayerId))
+					contextMenu.ActionUnmute(m_iPlayerId);
+				else
+					contextMenu.ActionMute(m_iPlayerId);
+				
+				PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
+				Print(string.Format("[DefendFlag] Onkick - m_sFlaggedDefendFactionKey=%1 m_sFactionKey=%2", localPc.m_sFlaggedDefendFactionKey, m_sFactionKey));
+				if (m_bCanKick && m_iPlayerId >= 0 && m_iPlayerId != m_iCurrentPlayerId && m_sFactionKey != localPc.m_sFlaggedDefendFactionKey)
+					contextMenu.ActionFreeSlot(m_iPlayableId).Insert(OnActionFreeSlot);
+				
+				if (PS_PlayersHelper.IsAdminOrServer())
+				{
+					contextMenu.ActionDirectMessage(m_iPlayerId);
+					contextMenu.ActionKick(m_iPlayerId);
+					
+					if (m_PlayableManager.GetPlayerPin(m_iPlayerId))
+						contextMenu.ActionUnpin(m_iPlayerId);
+					else
+						contextMenu.ActionPin(m_iPlayerId);
+				}
+			}
+			if (m_CoopLobby.GetSelectedPlayer() != m_iPlayerId && PS_PlayersHelper.IsAdminOrServer())
+			{
+				contextMenu.ActionPlayerSelect(m_iPlayerId);
+			}
+		}
+		
+		if (PS_PlayersHelper.IsAdminOrServer())
+			if (m_iPlayerId != -2)
+				contextMenu.ActionLock(m_iPlayableId).Insert(OnActionLock);
+			else
+				contextMenu.ActionUnlock(m_iPlayableId).Insert(OnActionUnlock);
+	}
+}
