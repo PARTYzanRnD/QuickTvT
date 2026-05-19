@@ -58,7 +58,7 @@ modded class PS_CharacterSelector
 				AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
 				return;
 			}
-
+			//RplId playableId = m_PlayableManager.GetPlayableByPlayer(m_iPlayerId);
 			if (!CanJoinFaction())
 			{
 
@@ -134,7 +134,7 @@ modded class PS_CharacterSelector
 			).GetOnOnContextAction();
 		}
 	}*/
-modded class PS_CharacterSelector : SCR_ButtonComponent
+/*modded class PS_CharacterSelector : SCR_ButtonComponent
 {
 	override void OpenContext()
 	{
@@ -185,4 +185,4 @@ modded class PS_CharacterSelector : SCR_ButtonComponent
 			else
 				contextMenu.ActionUnlock(m_iPlayableId).Insert(OnActionUnlock);
 	}
-}
+}*/

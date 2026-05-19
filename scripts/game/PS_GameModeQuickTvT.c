@@ -15,7 +15,7 @@ class PS_GameModeQuickTvTClass: PS_GameModeCoopClass
 {
 };
 
-class PS_GameModeQuickTvT : PS_GameModeCoop
+sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 {
 	static const string m_QuickTvTConfigFilePath = "$profile:PS_QuickTvT_Config.json";
 	protected static ref PS_QuickTvTMissionsConfig m_QuickTvTMissionsConfig;
@@ -37,6 +37,10 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 	[Attribute("12000", UIWidgets.EditBox, "", "", category: "Reforger Lobby")]
 	int m_iDebriefingTime;
 
+	
+	[Attribute("-1", UIWidgets.Auto, "Group leader required", category: "Reforger Lobby (WIP)")]
+	protected bool m_bRequireLeader;
+	
 	[RplProp()]
 	protected int m_iStepTime;
 
@@ -241,8 +245,8 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 			return false;
 		}
 		int elapsed = m_iSlotsTime - m_iStepTime;
-		Print(string.Format("[DefendFlag] IsRestricted - elapsed=%1ms / 60000ms, restricted=%2", elapsed, elapsed < 60000));
-		if (elapsed >= 60000)
+		Print(string.Format("[DefendFlag] IsRestricted - elapsed=%1ms / 120000ms, restricted=%2", elapsed, elapsed < 120000));
+		if (elapsed >= 120000)
 			return false;
 		return true;
 	}
@@ -456,7 +460,58 @@ class PS_GameModeQuickTvT : PS_GameModeCoop
 
 		return ratio <= desiredratio[factionKeyPlayer];
 	}
+	/*bool HasLeader(RplId m_iPlayableId, FactionKey factionKeyPlayer, FactionKey currentFaction)
+	{
+		if (!m_bRequireLeader)
+			return true;
 
+		map<FactionKey, int> players = new map<FactionKey, int>();
+		map<FactionKey, int> playables = new map<FactionKey, int>();
+		map<FactionKey, float> desiredratio = new map<FactionKey, float>();
+		array<PS_PlayableContainer> playableComponents = m_playableManager.GetPlayablesSorted();
+
+		//counting avaivable slots
+		int playablesammount = 0;
+		foreach (PS_PlayableContainer playable : playableComponents)
+		{
+			playablesammount = playablesammount + 1;
+			FactionKey factionKey = playable.GetFactionKey();
+			if (!players.Contains(factionKey))
+				players[factionKey] = 0;
+			if (!playables.Contains(factionKey))
+				playables[factionKey] = 0;
+
+			playables[factionKey] = playables[factionKey] + 1;
+			int playerId = m_playableManager.GetPlayerByPlayable(playable.GetRplId());
+			if (playerId > 0)
+			{
+				players[factionKey] = players[factionKey] + 1;
+			}
+
+		}
+		if (currentFaction != "")
+			players[currentFaction] = players[currentFaction] - 1;
+
+		//counting how much there are factons units compared to every unit
+		int playersCount = m_PlayerManager.GetPlayerCount();
+
+		foreach (FactionKey factionKey, int count: playables)
+		{
+			desiredratio[factionKey] = count / playablesammount;
+		}
+		//clamping avaivable over the ratio slots in proportion to current player count to ensure balance for small scenarios
+		//int adjfactionsbalance = Math.Clamp(m_iFactionsBalance,1,(playersCount / 10));
+
+		if (players[factionKeyPlayer] < 1)
+		{
+			//but we still want to get one player even in tiniest scenario
+			return true;
+		}
+		//check if that faction with a new player wouldnt get too many players
+		float ratio = (players[factionKeyPlayer] + 1 - m_iFactionsBalance) / playersCount;
+
+		return ratio <= desiredratio[factionKeyPlayer];
+	}*/
 
 	void BroadcastPolyZoneFactionChange(IEntity targetEntity, FactionKey factionKey, bool visible)
 	{
