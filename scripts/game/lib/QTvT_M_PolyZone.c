@@ -61,7 +61,7 @@ modded class GUB_RandomizeMissionLogic
 		    int attempt = 0;
 			Print(string.Format("GUB_RandomizeMissionLogic distance between %1 which is compared to %2 (%5) also dist from att is %3 and skir to def is %4 (%6)", distance, (m_fMinDistanceBetweenLocations * 1.5), distancedef, skirdistancedef, (distance <= (m_fMinDistanceBetweenLocations * 1.5)^2), (Math.AbsFloat(distancedef - skirdistancedef) >= 1000)));
 		
-		    while (distance <= (m_fMinDistanceBetweenLocations * 1.5) && attempt < maxAttempts && Math.AbsFloat(distancedef - skirdistancedef) >= 1000)
+		    while (distance <= (m_fMinDistanceBetweenLocations * 1.5) && attempt < maxAttempts && Math.AbsFloat(distancedef - skirdistancedef) >= 600)
 		    {
 		        m_eSkirmishAttackLocation = validAttackPoints.GetRandomElement();
 		        distance = Math.Sqrt(vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), attackOrigin));
@@ -70,7 +70,7 @@ modded class GUB_RandomizeMissionLogic
 		        attempt++;
 		    }
 		
-		    if (distance > (m_fMinDistanceBetweenLocations * 1.5) && Math.AbsFloat(distancedef - skirdistancedef) < 1000)
+		    if (distance > (m_fMinDistanceBetweenLocations * 1.5) && Math.AbsFloat(distancedef - skirdistancedef) < 600)
 		    {
 		        // нашли хорошую точку – выходим из цикла
 		        return true;
