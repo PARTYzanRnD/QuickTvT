@@ -59,6 +59,13 @@ modded class PS_CharacterSelector
 				return;
 			}
 			//RplId playableId = m_PlayableManager.GetPlayableByPlayer(m_iPlayerId);
+			/*
+			SCR_GroupsManagerComponent groupsManagerComponent = SCR_GroupsManagerComponent.GetInstance();
+			SCR_AIGroup playerGroup =  groupsManagerComponent.FindGroup(m_playablePlayerGroupId[m_iPlayerId]);
+			SCR_ChimeraCharacter leaderCharacter = null;
+			if (playerGroup)
+				leaderCharacter = SCR_ChimeraCharacter.Cast(playerGroup.GetLeaderEntity());
+			Print("[l leaderCharacter " + leaderCharacter);*/
 			if (!CanJoinFaction())
 			{
 
