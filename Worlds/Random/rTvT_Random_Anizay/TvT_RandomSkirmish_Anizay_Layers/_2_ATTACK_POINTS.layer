@@ -534,14 +534,12 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Squad_Attack_23 {
      coords 12.398 -5.182 -26.867
      angles 0 178.896 0
-     m_eGroupType Helicopter_Attack
      m_iCompanyCallsign 1
      m_iPlatoonCallsign 1
     }
     Squad_Attack_24 {
      coords 4.764 -1.154 -58.102
      angles 0 85.803 0
-     m_eGroupType Helicopter_Recon
      m_iCompanyCallsign 1
      m_iPlatoonCallsign 1
      m_iSquadCallsign 1
@@ -555,6 +553,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_24 {
      coords -27.768 -1.467 29.519
      angles 0 -89.61 0
+     m_eGroupType Recon
      m_iCompanyCallsign 3
     }
     HeliAttack_Attack_9 {
@@ -578,7 +577,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Recon_Attack_25 {
      coords 22.854 -7.52 -44.566
      angles 0 69.558 0
-     m_eGroupType Helicopter_Recon
+     m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 1
     }

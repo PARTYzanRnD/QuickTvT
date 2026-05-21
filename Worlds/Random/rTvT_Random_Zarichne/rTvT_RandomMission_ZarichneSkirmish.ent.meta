@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{41FAE6A1E3F11D8A}Worlds/Random/rTvT_Random_Zarichne/rTvT_RandomMission_ZarichneSkirmish.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{74ED98C4568098A7}Worlds/Random/rTvT_Random_Cain/rTvT_RandomMission_CainSkirmish.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

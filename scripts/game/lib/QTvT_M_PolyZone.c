@@ -28,6 +28,63 @@ modded class GUB_RandomizeMissionLogic
 	{
         m_eDefendLocation = GetRandomizeSpawnManager().GetDefendPoints().GetRandomElement();
 		
+		array<GUB_DefendPointEntity> triedDefendPoints = {};
+
+		while (true) // или пока не найдём подходящий вариант
+		{
+		    m_eDefendLocation = GetRandomizeSpawnManager().GetDefendPoints().GetRandomElement();
+		
+		    // если все возможные точки обороны уже были проверены, выходим с fallback'ом
+		    if (triedDefendPoints.Find(m_eDefendLocation) != -1)
+		        continue; // эту уже пробовали, берём другую
+		
+		    triedDefendPoints.Insert(m_eDefendLocation);
+		
+		    ref array<GUB_AttackPointEntity> validAttackPoints = GetValidAttackPoints(m_eDefendLocation);
+		    if (validAttackPoints.IsEmpty())
+		        continue; // нет атакующих точек – пробуем другую оборону
+		
+		    m_eAttackLocation = validAttackPoints.GetRandomElement();
+		    validAttackPoints.Remove(validAttackPoints.Find(m_eAttackLocation));
+		
+		    if (validAttackPoints.IsEmpty())
+		        continue; // не осталось точек для стычки – следующая оборона
+		
+		    // ищем подходящую точку для стычки (дальше 1000 метров)
+		    m_eSkirmishAttackLocation = validAttackPoints.GetRandomElement();
+		    vector attackOrigin = m_eAttackLocation.GetOrigin();
+		    vector defOrigin = m_eDefendLocation.GetOrigin();
+		    float distance = Math.Sqrt(vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), attackOrigin));
+		    float distancedef = Math.Sqrt(vector.DistanceSq(attackOrigin, defOrigin));
+		    float skirdistancedef = Math.Sqrt(vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), defOrigin));
+		    int maxAttempts = validAttackPoints.Count();
+		    int attempt = 0;
+			Print(string.Format("GUB_RandomizeMissionLogic distance between %1 which is compared to %2 (%5) also dist from att is %3 and skir to def is %4 (%6)", distance, (m_fMinDistanceBetweenLocations * 1.5), distancedef, skirdistancedef, (distance <= (m_fMinDistanceBetweenLocations * 1.5)^2), (Math.AbsFloat(distancedef - skirdistancedef) >= 1000)));
+		
+		    while (distance <= (m_fMinDistanceBetweenLocations * 1.5) && attempt < maxAttempts && Math.AbsFloat(distancedef - skirdistancedef) >= 1000)
+		    {
+		        m_eSkirmishAttackLocation = validAttackPoints.GetRandomElement();
+		        distance = Math.Sqrt(vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), attackOrigin));
+				distancedef = Math.Sqrt(vector.DistanceSq(attackOrigin, defOrigin));
+		    		skirdistancedef = Math.Sqrt(vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), defOrigin));
+		        attempt++;
+		    }
+		
+		    if (distance > (m_fMinDistanceBetweenLocations * 1.5) && Math.AbsFloat(distancedef - skirdistancedef) < 1000)
+		    {
+		        // нашли хорошую точку – выходим из цикла
+		        return true;
+		    }
+			if (triedDefendPoints.Count() == GetRandomizeSpawnManager().GetDefendPoints().Count())
+				break;
+		    // иначе все варианты были слишком близко – пробуем другую точку обороны
+		}
+		
+		Print(string.Format("GUB_RandomizeMissionLogic Error: Can't generate attack point to {%1}", m_eDefendLocation.GetName()), LogLevel.ERROR);
+		return false;
+		
+		
+		/*
 		ref array<GUB_AttackPointEntity> validAttackPoints = GetValidAttackPoints(m_eDefendLocation);
 		if (validAttackPoints.Count() == 0)
 		{
@@ -37,8 +94,12 @@ modded class GUB_RandomizeMissionLogic
 		m_eAttackLocation = validAttackPoints.GetRandomElement();
 		validAttackPoints.Remove(validAttackPoints.Find(m_eAttackLocation));
 		m_eSkirmishAttackLocation = validAttackPoints.GetRandomElement();
+		vector location = m_eAttackLocation.GetOrigin();
+		distance = vector.DistanceSq(m_eSkirmishAttackLocation.GetOrigin(), location);
+		if (distance <= 1000*1000)
+			continue;
 		Print("[s " + m_eSkirmishAttackLocation + " m_eAttackLocation " + m_eAttackLocation);
-		return true;
+		return true;*/
 	}
 	
 	
