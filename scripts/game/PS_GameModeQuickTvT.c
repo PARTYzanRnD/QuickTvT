@@ -524,7 +524,10 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 
 		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
 		if (polyZone)
+		{
 			polyZone.ApplyFactionVisiblity(factionKey, visible);
+			polyZone.ApplyFactionVisiblity("", visible);
+		}
 		//else
 		//Print("-2-ERROR: polyZone is null on entity=" + targetEntity);
 
@@ -548,8 +551,10 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 		PS_PolyZone polyZone = PS_PolyZone.Cast(targetEntity.FindComponent(PS_PolyZone));
 		//Print("-3-polyZone component: " + polyZone);
 		if (polyZone)
+		{
 			polyZone.ApplyFactionVisiblity(factionKey, visible);
-		else
+			polyZone.ApplyFactionVisiblity("", visible);
+		}
 			//Print("-3-ERROR: polyZone is null on found entity");
 	}
 
