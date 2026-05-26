@@ -1,0 +1,81 @@
+$grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
+ FLAG_Bellau {
+  coords 5646.615 122.021 6382.914
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords 36.765 -1.97 4.384
+    angles 0 89 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 37.817 -2.069 4.523
+    angles 0 89 0
+   }
+  }
+ }
+ FLAG_lucy {
+  coords 4871.443 176.291 3593.64
+  angles 0 -150.462 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords -0.639 0 -0.011
+    angles 0 89 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 0.443 0 0.008
+    angles 0 89 0
+   }
+  }
+ }
+ FLAG_fortdou {
+  coords 8551.17 228.594 7703.589
+  angles 0 -150.462 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords -0.639 0 -0.011
+    angles 0 89 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 0.443 0 0.008
+    angles 0 89 0
+   }
+  }
+ }
+ FLAG_bussi {
+  coords 3066.292 115.25 7032.012
+  angles 0 -39.492 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords -0.639 0 -0.011
+    angles 0 89 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 0.443 0 0.008
+    angles 0 89 0
+   }
+  }
+ }
+ FLAG_dam {
+  coords 1296.627 89.167 7728.01
+  angles 0 154.029 0
+  {
+   GenericEntity {
+    ID "690D207172AC0ED0"
+    coords -0.639 0 -0.011
+    angles 0 89 0
+   }
+   GenericEntity {
+    ID "690D207415BCE83A"
+    coords 0.443 0 0.008
+    angles 0 89 0
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{39006F955CC6C9A5}Worlds/Random/rTvT_Random_Bellau/rTvT_Random_BellauSkirmish.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

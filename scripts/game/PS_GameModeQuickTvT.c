@@ -41,6 +41,10 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 	[Attribute("-1", UIWidgets.Auto, "Group leader required", category: "Reforger Lobby (WIP)")]
 	protected bool m_bRequireLeader;
 	
+	
+	[Attribute("-1", UIWidgets.Auto, "Is Skirmish", category: "Reforger Lobby (WIP)")]
+	protected bool m_bIsSkirmish;
+	
 	[RplProp()]
 	protected int m_iStepTime;
 
@@ -52,6 +56,20 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 
 	protected bool m_bTimerEnabled = true;
 
+
+	
+	bool IsSkirmish()
+	{
+		return m_bIsSkirmish;
+	}
+	
+	
+	void SetSkirmish(bool isSkirmish)
+	{
+		m_bIsSkirmish = isSkirmish;
+		Print("[skir" + m_bIsSkirmish);
+	}
+	
 	int GetStepTime()
 	{
 		return m_iStepTime;

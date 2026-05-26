@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{7B53B5DFB669C99F}Worlds/Random/rTvT_Random_Eden/rTvT_RandomMission_EdenBase.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

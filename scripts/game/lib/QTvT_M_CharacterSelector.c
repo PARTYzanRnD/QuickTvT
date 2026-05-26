@@ -49,7 +49,7 @@ modded class PS_CharacterSelector
 				PS_PlayableControllerComponent localPc = PS_PlayableControllerComponent.Cast(GetGame().GetPlayerController().FindComponent(PS_PlayableControllerComponent));
 				Print(string.Format("[DefendFlag] OnClicked - m_bIsDefendFlagged=%1", localPc.m_bIsDefendFlagged));
 			}
-			if (gameModeQuickTvT && gameModeQuickTvT.IsDefendFactionRestrictedForLocal(m_sFactionKey))
+			if (gameModeQuickTvT && gameModeQuickTvT.IsDefendFactionRestrictedForLocal(m_sFactionKey) && !gameModeQuickTvT.IsSkirmish())
 			{
 				SCR_ChatPanelManager chatPanelManager = SCR_ChatPanelManager.GetInstance();
 				ChatCommandInvoker invoker = chatPanelManager.GetCommandInvoker("lmsg");

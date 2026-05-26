@@ -454,9 +454,12 @@ class GUB_RandomizeSkirmishMissionComponent : GUB_RandomizeMissionComponent
 			return;
 		
 		m_rLogic.RandomizeSkirmishMission();
-		PS_GameModeCoop gameModeCoop = PS_GameModeCoop.Cast(GetGame().GetGameMode());
+		PS_GameModeQuickTvT gameModeCoop = PS_GameModeQuickTvT.Cast(GetGame().GetGameMode());
 		if (gameModeCoop)
+		{
 			gameModeCoop.GetOnGameStateChange().Insert(OnGameStateChanged);
+			//gameModeCoop.SetSkirmish(true);
+		}
 		
 		GetGame().GetCallqueue().CallLater(m_rLogic.SpawnSkirmishObjectives, 100);
 		

@@ -5,4 +5,7 @@ PerceptionManager PerceptionManager2 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 }
 PS_GameModeQuickTvT PS_GameMode_LobbyQTvT1 : "{AE6954BB7469DF23}Prefabs/MP/Modes/PS_GameMode_LobbyQTvT.et" {
  coords 15.436 20.429 19.444
+ m_bReserveSlots 0
+ m_bDisableBuildingModeAfterFreezeTime 0
+ m_bIsSkirmish 1
 }

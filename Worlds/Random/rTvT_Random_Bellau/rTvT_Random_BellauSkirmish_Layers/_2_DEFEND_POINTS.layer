@@ -1,0 +1,237 @@
+$grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
+ DEFEND_bellau {
+  coords 5646.247 122.073 6383.06
+  angles 0 0 0
+  m_sFlagName "FLAG_Bellau"
+  m_sPolyzoneEntityName "Zone_bellau"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_1 {
+     coords 21.493 -1.506 13.024
+     angles 0 -16.072 0
+     m_iCompanyCallsign 1
+    }
+    Squad_2 {
+     coords 10.929 -0.803 10.868
+     angles 0 -11.928 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_1 {
+     coords 52.945 -0.393 -40.184
+     angles 0 -94.387 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_1 {
+     coords 45.904 -2.85 11.515
+     angles 0 -95.355 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_1 {
+     coords 48.042 -2.509 -1.187
+     angles 0 -96.518 0
+     m_eGroupType Command_7
+    }
+    Squad_3 {
+     coords 33.221 -2.981 12.743
+     angles 0 -7.387 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+  }
+ }
+ DEFEND_lucy {
+  coords 4857.638 180.155 3624.15
+  angles 0 0 0
+  m_sFlagName "FLAG_lucy"
+  m_sPolyzoneEntityName "Zone_lucy"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_4 {
+     coords 29.998 -4.183 -24.581
+     angles 0 -137.204 0
+     m_iCompanyCallsign 1
+    }
+    Squad_5 {
+     coords 17.047 -4.514 -28.037
+     angles 0 40.674 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_2 {
+     coords 0.558 -3.891 -39.253
+     angles 0 124.398 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_2 {
+     coords 20.22 -4.966 -7.094
+     angles 0 121.54 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_2 {
+     coords 11.939 -4.856 -21.124
+     angles 0 124.852 0
+     m_eGroupType Command_7
+    }
+    Squad_6 {
+     coords 26.047 -6.106 -34.305
+     angles 0 20.909 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+  }
+ }
+ DEFEND_fortdou {
+  coords 8530.116 232.661 7722.959
+  angles 0 0 0
+  m_sFlagName "FLAG_fortdou"
+  m_sPolyzoneEntityName "Zone_fortdou"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_7 {
+     coords 23.733 -4.183 -2.364
+     angles 0 -137.204 0
+     m_iCompanyCallsign 1
+    }
+    Squad_8 {
+     coords 32.024 -4.514 -4.703
+     angles 0 40.674 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_3 {
+     coords -78.92 -7.496 -45.735
+     angles 0 -10.963 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_3 {
+     coords -46.739 -4.871 -40.375
+     angles 0 72.315 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_3 {
+     coords -44.758 -4.856 -28.619
+     angles 0 -98.739 0
+     m_eGroupType Command_7
+    }
+    Squad_9 {
+     coords 15.854 -6.106 -4.316
+     angles 0 119.747 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -21.293 4.794 -22.93
+   }
+  }
+ }
+ DEFEND_bussi {
+  coords 3035.615 129.771 7066.984
+  angles 0 0 0
+  m_sFlagName "FLAG_bussi"
+  m_sPolyzoneEntityName "Zone_bussi"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_10 {
+     coords 15.781 -2.687 -21.959
+     angles 0 134.778 0
+     m_iCompanyCallsign 1
+    }
+    Squad_11 {
+     coords 33.447 -14.968 -38.78
+     angles 0 40.674 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_4 {
+     coords -58.355 -10.467 -23.576
+     angles 0 -70.065 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_4 {
+     coords -51.982 -1.881 -5.116
+     angles 0 -63.541 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_4 {
+     coords -43.637 -8.076 8.056
+     angles 0 -67.186 0
+     m_eGroupType Command_7
+    }
+    Squad_12 {
+     coords 42.924 -10.024 -42.612
+     angles 0 -107.354 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -21.293 4.794 -22.93
+   }
+  }
+ }
+ DEFEND_dam {
+  coords 1316.476 87.563 7722.906
+  angles 0 0 0
+  m_sFlagName "FLAG_dam"
+  m_sPolyzoneEntityName "Zone_dam"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_13 {
+     coords -21.127 -0.019 9.529
+     angles 0 150.06 0
+     m_iCompanyCallsign 1
+    }
+    Squad_14 {
+     coords -23.584 -15.108 -5.638
+     angles 0 92.569 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_5 {
+     coords -10.164 -4.329 -35.958
+     angles 0 -162.558 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+    }
+    Motorized_5 {
+     coords -24.628 -1.881 -33.975
+     angles 0 -177.069 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_5 {
+     coords -37.43 -8.091 -33.73
+     angles 0 157.817 0
+     m_eGroupType Command_7
+    }
+    Squad_15 {
+     coords -13.707 -11.307 -12.125
+     angles 0 -107.354 0
+     m_iCompanyCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords -21.293 4.794 -22.93
+   }
+  }
+ }
+}
