@@ -13,7 +13,6 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
    m_aFactionPrefabs {
     GUB_FactionPrefab "{68B2D70FC18F2D0B}" : "{585DAD11963FFC1F}Configs/RandomPrefabConfig_AFRF.conf" {
      m_aEnemyFactionKeys +{
-      "RHS_ION"
       "Ses_CDF"
      }
     }
@@ -34,6 +33,7 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
     GUB_FactionPrefab "{694ACE0DE24EFC65}" : "{AAA83BB78384B5D7}Configs/RandomPrefabConfig_UK89.conf" {
     }
    }
+   m_fMinDistanceBetweenLocations 700
    m_fMaxDistanceBetweenLocations 5000
    m_bMarkersOnlyOnBriefing 1
    m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
