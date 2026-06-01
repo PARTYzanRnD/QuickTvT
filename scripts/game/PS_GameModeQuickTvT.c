@@ -280,6 +280,81 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 		GetGame().GetCallqueue().CallLater(SendDefendFlagToPlayer, 16000, false, playerId);
 	}
 
+	// Update state for disconnected and start timer if need (DO NOT DELETE CONTROLED ENTITY)
+	protected override void OnPlayerDisconnected(int playerId, KickCauseCode cause, int timeout)
+	{
+		PlayerManager playerManager = GetGame().GetPlayerManager();
+		SCR_PlayerController playerController = SCR_PlayerController.Cast(playerManager.GetPlayerController(playerId));
+		PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(playerController.FindComponent(PS_PlayableControllerComponent));
+
+		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+		playableManager.SetPlayerState(playerId, PS_EPlayableControllerState.Disconected);
+		if (m_iReconnectTime > 0) GetGame().GetCallqueue().CallLater(RemoveDisconnectedPlayer, m_iReconnectTime, false, playerId);
+
+		IEntity controlledEntity = playerController.GetControlledEntity();
+		if (controlledEntity) {
+			RplComponent rpl = RplComponent.Cast(controlledEntity.FindComponent(RplComponent));
+			rpl.GiveExt(RplIdentity.Local(), false);
+		}
+
+		m_OnPlayerDisconnected.Invoke(playerId, cause, timeout);
+		foreach (SCR_BaseGameModeComponent comp : m_aAdditionalGamemodeComponents)
+		{
+			comp.OnPlayerDisconnected(playerId, cause, timeout);
+		}
+
+		m_OnPostCompPlayerDisconnected.Invoke(playerId, cause, timeout);
+
+		// RespawnSystemComponent is not a SCR_BaseGameModeComponent, so for now we have to
+		// propagate these events manually.
+		if (IsMaster())
+			m_pRespawnSystemComponent.OnPlayerDisconnected_S(playerId, cause, timeout);
+
+		foreach (SCR_BaseGameModeComponent comp : m_aAdditionalGamemodeComponents)
+		{
+			comp.OnPlayerDisconnected(playerId, cause, timeout);
+		}
+
+		m_OnPostCompPlayerDisconnected.Invoke(playerId, cause, timeout);
+
+		if (IsMaster())
+		{
+			if (controlledEntity)
+			{
+				if (SCR_ReconnectComponent.GetInstance())
+				{
+					if (SCR_ReconnectComponent.GetInstance().HandlePlayerDisconnect(playerId, cause))	// if conditions to allow reconnect pass, skip the entity delete
+					{
+						CharacterControllerComponent charController = CharacterControllerComponent.Cast(controlledEntity.FindComponent(CharacterControllerComponent));
+						if (charController)
+						{
+							charController.SetMovement(0, vector.Forward);
+						}
+
+						CompartmentAccessComponent compAccess = CompartmentAccessComponent.Cast(controlledEntity.FindComponent(CompartmentAccessComponent)); // TODO nullcheck
+						if (compAccess)
+						{
+							BaseCompartmentSlot compartment = compAccess.GetCompartment();
+							if (compartment)
+							{
+								CarControllerComponent carController = CarControllerComponent.Cast(compartment.GetVehicle().FindComponent(CarControllerComponent));
+								if (carController)
+								{
+									carController.Shutdown();
+									carController.StopEngine(false);
+								}
+							}
+						}
+
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
 	void SendDefendFlagToPlayer(int playerId)
 	{
 		string uid = GetGame().GetBackendApi().GetPlayerUID(playerId);

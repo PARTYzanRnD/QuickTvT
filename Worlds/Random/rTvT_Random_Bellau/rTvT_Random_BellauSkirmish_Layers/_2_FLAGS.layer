@@ -1,5 +1,10 @@
 $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
  FLAG_Bellau {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
   coords 5646.615 122.021 6382.914
   {
    GenericEntity {
@@ -15,6 +20,11 @@ $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military
   }
  }
  FLAG_lucy {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
   coords 4871.443 176.291 3593.64
   angles 0 -150.462 0
   {
@@ -31,6 +41,11 @@ $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military
   }
  }
  FLAG_fortdou {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
   coords 8551.17 228.594 7703.589
   angles 0 -150.462 0
   {
@@ -47,6 +62,11 @@ $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military
   }
  }
  FLAG_bussi {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
   coords 3066.292 115.25 7032.012
   angles 0 -39.492 0
   {
@@ -63,6 +83,11 @@ $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military
   }
  }
  FLAG_dam {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
   coords 1296.627 89.167 7728.01
   angles 0 154.029 0
   {
