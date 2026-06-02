@@ -1,0 +1,56 @@
+SCR_ChimeraCharacter : "{FC13DAA97D49137F}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_Sergeant_KLMK.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{EB404DC9E1BCB750}Prefabs/Weapons/Rifles/AK74/Rifle_AK74N_1P29.et"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{722CE6FEC39EE896}Prefabs/Weapons/Launchers/RPG22/Launcher_RPG22.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{D4028ED16DEE99EE}Prefabs/Characters/HeadGear/Helmet_SSh68_01/Helmet_SSh68_01_camonet.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Prefab "{4CBDC206FEF9897C}Prefabs/Characters/Vests/Vest_6B3/Vest_6B3.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab ""
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
+     TargetStorage "Jacket/Suit_KLMK.et"
+    }
+    ItemsInitConfigurationItem "{5DA0B05D4EF2940A}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{5DA0B05D4E3795DB}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{689E8D71B384265F}" {
+     TargetStorage "Jacket/Suit_KLMK.et"
+    }
+    ItemsInitConfigurationItem "{689E8D724D1D62D8}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+     PrefabsToSpawn {
+      "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68A08C39AF9DAB67}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+     PrefabsToSpawn {
+      "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{68A08C3946529762}" {
+     Enabled 0
+     TargetStorage "Vest/Vest_SovietHarness_rifleman.et/GrenadePouch/Vest_SovietHarness_GrenadePouch.et"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,7 @@
+SCR_AIGroup : "{292AED2259143148}Prefabs/Groups/OPFOR/USSR/Group_USSR_base.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{8A7E668F5E102151}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SL_RANDOM.et" "{CDE7F53CAD55EAE4}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_SR_RANDOM.et" "{382B57CD0F62D30C}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_AR_RANDOM.et" "{C2F69F3C54240EA6}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_GL_RANDOM.et" "{A6A94055EB791019}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_LAT_RANDOM.et" "{BA92838DA2F16499}Prefabs/Characters/Factions/OPFOR/USSR_Army/USSR_ARMY_REGULAR/Radnom/Char_USSR_Sharpshooter_RANDOM.et"
+ }
+ m_sCustomNameSet "#PDVL_Squad_Recon"
+}

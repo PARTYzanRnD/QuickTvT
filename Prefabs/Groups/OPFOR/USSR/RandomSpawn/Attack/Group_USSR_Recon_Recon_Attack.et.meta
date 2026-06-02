@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{4D003633E41A6B5F}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Attack/Group_USSR_Recon_Recon_Attack.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
+  }
+ }
+}

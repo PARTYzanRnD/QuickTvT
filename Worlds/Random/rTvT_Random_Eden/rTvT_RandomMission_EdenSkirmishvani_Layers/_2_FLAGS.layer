@@ -1,0 +1,234 @@
+$grp GenericEntity : "{F922096EA06089F6}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
+ FLAG_CHOTAIN {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7072.648 118.505 6021.935
+ }
+ FLAG_DURRAS {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 8815.186 95.869 2782.493
+ }
+ FLAG_ENTREDEUX {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5754.92 217.738 7061.658
+ }
+ FLAG_FACTORY {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4533.469 16.65 10518.004
+ }
+ FLAG_FARM {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5123.682 176.009 7030.234
+ }
+ FLAG_FARM2 {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4999.347 25.448 9948.23
+ }
+ FLAG_FIGARI {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5272.937 63.148 5347.089
+ }
+ FLAG_GRAVETTE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4132.859 36.242 7791.985
+ }
+ FLAG_KERMOVAN {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 6348.437 5.663 9642.782
+ }
+ FLAG_LAMENTIN {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 1288.469 37.453 6015.02
+ }
+ FLAG_LARUNS {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7555.652 82.603 5539.79
+ }
+ FLAG_LEMOULE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 2639.806 91.811 5360.184
+ }
+ FLAG_LEVIE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7456.183 137.097 4737.813
+ }
+ FLAG_LEVIEMILITARY {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7501.457 165.735 4285.541
+ }
+ FLAG_MEAUX {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4523.051 14.159 9460.093
+ }
+ FLAG_MILITARY {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7687.763 13.044 8101.39
+ }
+ FLAG_MILITARYCHOTAIN {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7466.722 7.723 6719.234
+ }
+ FLAG_MILITARYGRAVETTE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 3887.152 15.25 8467.312
+ }
+ FLAG_MONTIGNAC {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4753.141 169.278 6987.826
+ }
+ FLAG_MORTON {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5131.95 16.849 4008.586
+ }
+ FLAG_POWERPLANT {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5831.068 4.615 9791.343
+ }
+ FLAG_PROVINS {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 5523.15 95.838 6014.343
+ }
+ FLAG_QUARRY {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 8789.607 196.6 3898.509
+ }
+ FLAG_REGINA {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 7188.567 137.491 2324.664
+ }
+ FLAG_SAWMILL {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 3108.239 118.625 5211.43
+ }
+ FLAG_STPHILLIPE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4419.676 12.803 10730.872
+ }
+ FLAG_TYRONE {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 4935.491 36.128 9094.713
+ }
+ FLAG_VERNON {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 9254.432 58.43 2072.03
+ }
+ FLAG_VILLENEUF {
+  components {
+   SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+    m_iAdvanceAfterSec 1200
+   }
+  }
+  coords 2840.276 86.513 6349.158
+ }
+}

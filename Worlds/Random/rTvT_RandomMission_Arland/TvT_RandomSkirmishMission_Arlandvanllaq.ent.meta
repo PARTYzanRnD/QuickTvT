@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{038ACB38319FF852}Worlds/Random/rTvT_RandomMission_Arland/TvT_RandomSkirmishMission_Arlandvanllaq.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

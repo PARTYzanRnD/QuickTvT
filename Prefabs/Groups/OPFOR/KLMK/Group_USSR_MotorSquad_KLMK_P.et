@@ -1,0 +1,13 @@
+SCR_AIGroup : "{97D45056CFC22FF2}Prefabs/Groups/OPFOR/KLMK/Group_USSR_RifleSquad_KLMK.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "LineCompact"
+  }
+  PS_GroupCallsignAssigner "{6982AA86815E4A93}" {
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{ACD038BB506F47A9}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_SL_KLMK_P.et" "{EB49AB08A32A8C1C}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_SR_KLMK_P.et" "{1E8509F9011DB5F4}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_AR_KLMK_P.et" "{4ACD46BEECC179AA}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_AT_KLMK_P.et" "{474B20F1FAE24A79}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_AAT_KLMK_P.et" "{E458C1085A5B685E}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_GL_KLMK_P.et" "{38A265E0AD531E0B}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_LAT_KLMK_P.et" "{65D019481247F483}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_CC_P.et" "{19CCD8504848310D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew_P.et"
+ }
+}

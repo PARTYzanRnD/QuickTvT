@@ -1,0 +1,13 @@
+SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "LineCompact"
+  }
+  PS_GroupCallsignAssigner "{6982CBD2738A260B}" {
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{D164278FD7D9C81A}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_PL_P.et" "{EB2904CE98753A6E}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_MG_P.et" "{CA2EB3A73FABC625}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AMG_P.et" "{6F42ED2198C9217F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AT2_P.et" "{B452527EA042DFF0}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Sniper_P.et" "{F6836BCA03008E4B}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Scout_RTO_P.et"
+ }
+}

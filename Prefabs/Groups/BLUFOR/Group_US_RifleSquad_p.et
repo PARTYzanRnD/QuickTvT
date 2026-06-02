@@ -1,0 +1,13 @@
+SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "LineCompact"
+  }
+  PS_GroupCallsignAssigner "{6982AA832BC44ABB}" {
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{D71967303121C58A}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SLO_P.et" "{9DB0F7AD6A6647E3}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GLTL_P.et" "{7E44CF4FB58F8FF7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR_P.et" "{23CF7AD7DEB5E7E4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Ammo_P.et" "{C262DC827577226C}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT_P.et" "{9DB0F7AD6A6647E3}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GLTL_P.et" "{7E44CF4FB58F8FF7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR_P.et" "{23CF7AD7DEB5E7E4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Ammo_P.et" "{C262DC827577226C}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_LAT_P.et"
+ }
+}

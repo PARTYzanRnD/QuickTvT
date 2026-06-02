@@ -1,0 +1,13 @@
+SCR_AIGroup : "{1F468430E5AB477E}Prefabs/Groups/BLUFOR/GreenBerets/Suppressed/Group_US_GreenBeret_ReconSquad.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "LineCompact"
+  }
+  PS_GroupCallsignAssigner "{6982AA8DB046B03A}" {
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{6BFF6DCD047309CD}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_SL_P.et" "{1440AE966CB75BE9}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_GL_P.et" "{9D49EF41B2B47117}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Sharpshooter_P.et" "{8878262151B42117}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_LMG_P.et" "{4A9A05BF6D7DC9EA}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_Medic_P.et" "{8ED9B8A1C2E51DC6}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_RTO_P.et"
+ }
+}
