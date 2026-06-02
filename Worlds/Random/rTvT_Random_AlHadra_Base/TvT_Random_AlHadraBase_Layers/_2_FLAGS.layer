@@ -1,0 +1,20 @@
+$grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
+ FLAG_WESTVIL {
+  coords 2053.768 17.844 5333.077
+ }
+ FLAG_EASTVIL {
+  coords 2995.846 17.844 5219.433
+ }
+ FLAG_BUS {
+  coords 4265.588 17.844 2853.577
+ }
+ FLAG_SOUTHVIL {
+  coords 4207.295 17.844 4042.529
+ }
+ FLAG_STROY {
+  coords 5358.674 37.42 4649.798
+ }
+ FLAG_MOSQUE {
+  coords 6393.201 17.844 2970.678
+ }
+}
