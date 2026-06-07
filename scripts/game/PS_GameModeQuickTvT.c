@@ -48,6 +48,10 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 	[RplProp()]
 	protected int m_iStepTime;
 
+	[Attribute("-1", UIWidgets.Auto, "", category: "Reforger Lobby (WIP)")]
+	protected int m_iFactionsBalance;
+	
+	
 	protected ref map<string, bool> m_mDefendFlagPlayers = new map<string, bool>();
 
 	protected static int m_iMissionNum = 0;
@@ -281,7 +285,7 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 	}
 
 	// Update state for disconnected and start timer if need (DO NOT DELETE CONTROLED ENTITY)
-	protected override void OnPlayerDisconnected(int playerId, KickCauseCode cause, int timeout)
+	/*protected override void OnPlayerDisconnected(int playerId, KickCauseCode cause, int timeout)
 	{
 		PlayerManager playerManager = GetGame().GetPlayerManager();
 		SCR_PlayerController playerController = SCR_PlayerController.Cast(playerManager.GetPlayerController(playerId));
@@ -351,7 +355,7 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 				}
 			}
 		}
-	}
+	}*/
 	
 	
 	
@@ -499,7 +503,7 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 		GetGame().GetCallqueue().Remove(CheckAlive);
 	}
 
-	override bool CanJoinFaction(FactionKey factionKeyPlayer, FactionKey currentFaction)
+	bool CanJoinFaction(FactionKey factionKeyPlayer, FactionKey currentFaction)
 	{
 		if (m_iFactionsBalance == -1)
 			return true;

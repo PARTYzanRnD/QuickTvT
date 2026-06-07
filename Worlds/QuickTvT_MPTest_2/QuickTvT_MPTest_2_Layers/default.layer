@@ -10021,8 +10021,13 @@ SCR_AIGroup : "{1BE3BE9E157B89CF}Prefabs/Groups/BLUFOR/Group_US_PL_4_p.et" {
 SCR_ChimeraCharacter : "{1D2479DB47C9078C}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_Sapper_KLMK_P.et" {
  coords 147.698 1 130.807
 }
-SCR_AIGroup : "{1F0D8F425713D16F}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Defend/Group_USSR_Recon_HeliRecon_Defend.et" {
- coords 136.386 1 132.461
+$grp SCR_AIGroup : "{1F0D8F425713D16F}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Defend/Group_USSR_Recon_HeliRecon_Defend.et" {
+ {
+  coords 136.386 1 132.461
+ }
+ {
+  coords 125.355 1 134.014
+ }
 }
 SCR_AIGroup : "{22B3FA7B42A78760}Prefabs/Groups/BLUFOR/Group_US_PL_8_p.et" {
  coords 147.158 1 135.726
@@ -10086,6 +10091,12 @@ $grp SCR_ChimeraCharacter : "{530A65EFD09BD7EF}Prefabs/Characters/Factions/OPFOR
 SCR_AIGroup : "{58CAF5DD48301755}Prefabs/Groups/OPFOR/USSR/RandomSpawn/Attack/Group_USSR_Recon_HeliRecon_Attack.et" {
  coords 141.308 1 136.104
 }
+SCR_AIGroup : "{61C4787FD49A8B1F}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Recon_Defend_P.et" {
+ coords 122.079 1 141.822
+}
+SCR_AIGroup : "{65BEC35F82CE7F7B}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Helirecon_P.et" {
+ coords 119.096 1 146.491
+}
 SCR_AIGroup : "{698D0E3F8D362D7B}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Crew_P.et" {
  coords 135.854 1 129.451
 }
@@ -10097,6 +10108,9 @@ SCR_AIGroup : "{7B9646130855038A}Prefabs/Groups/OPFOR/KLMK/Group_USSR_RifleSquad
 }
 GenericEntity : "{7E9CD221A58D3ECB}Prefabs/Weapons/Rifles/M16/Rifle_M16A4.et" {
  coords 152.979 1 141.547
+}
+SCR_AIGroup : "{8A8AD708DE36E906}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Recon_P.et" {
+ coords 125.4 1 149.605
 }
 SCR_AIGroup : "{8F9E018B05886BFE}Prefabs/Groups/OPFOR/KLMK/Group_USSR_RifleSquad_PL_4_P.et" {
  coords 120.815 1 157.414

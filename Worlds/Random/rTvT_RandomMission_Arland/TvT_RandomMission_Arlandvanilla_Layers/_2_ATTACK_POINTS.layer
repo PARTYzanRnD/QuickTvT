@@ -412,7 +412,8 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      coords 22.945 -0.381 2.697
      angles 0 -48.451 0
      m_eGroupType Helicopter_Attack
-     m_iCompanyCallsign 5
+     m_iCompanyCallsign 4
+     m_iSquadCallsign 3
     }
     HeliRecon_Attack_5 {
      coords 25.487 -0.485 1.895

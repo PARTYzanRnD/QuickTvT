@@ -1,4 +1,4 @@
-modded class PS_CharacterSelector
+/*modded class PS_CharacterSelector
 {
 	override void OnClicked(SCR_ButtonBaseComponent button)
 	{
@@ -57,7 +57,7 @@ modded class PS_CharacterSelector
 				m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
 				AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
 				return;
-			}
+			}*/
 			//RplId playableId = m_PlayableManager.GetPlayableByPlayer(m_iPlayerId);
 			/*
 			SCR_GroupsManagerComponent groupsManagerComponent = SCR_GroupsManagerComponent.GetInstance();
@@ -66,7 +66,7 @@ modded class PS_CharacterSelector
 			if (playerGroup)
 				leaderCharacter = SCR_ChimeraCharacter.Cast(playerGroup.GetLeaderEntity());
 			Print("[l leaderCharacter " + leaderCharacter);*/
-			if (!CanJoinFaction())
+			/*if (!CanJoinFaction())
 			{
 
 				SCR_ChatPanelManager chatPanelManager = SCR_ChatPanelManager.GetInstance();
@@ -98,7 +98,7 @@ modded class PS_CharacterSelector
 			m_PlayableControllerComponent.SwitchToMenuServer(SCR_EGameModeState.BRIEFING);
 	}
 
-};
+};*/
 
 
 /*modded class PS_ContextMenu : SCR_ScriptedWidgetComponent

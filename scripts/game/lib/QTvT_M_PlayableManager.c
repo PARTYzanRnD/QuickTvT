@@ -19,7 +19,6 @@ modded class PS_PlayableManager
 	
 	override void SetFactionReady(FactionKey factionKey, int readyValue)
 	{
-		RPC_SetFactionReady(factionKey, readyValue);
 		Rpc(RPC_SetFactionReady, factionKey, readyValue);
 		
 		if (m_bFactionsReadySended)
@@ -33,7 +32,7 @@ modded class PS_PlayableManager
 			factionKey = GetPlayerFactionKey(playerId);
 			if (factionKey == "")
 				continue;
-			if (m_mFactionReady[factionKey])
+			if (m_FactionReadyMap[factionKey])
 				continue;
 			allFactionsReady = false;
 			break;
