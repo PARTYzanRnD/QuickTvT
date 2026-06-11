@@ -1,0 +1,73 @@
+GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
+ ID "511E9C6ADE70F798"
+ components {
+  MeshObject "{511E9C6ADE70F7BD}" {
+   Object "{C7ABED41290867DE}Assets/Items/Equipment/Backpacks/Backpack_84mm_MAW_Carrier/MAW_84mm_HEAT_651_Carrier_02.xob"
+   LODFactors {
+    1 3 1 1 1
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB03A40528FA}" {
+   Enabled 1
+   Attributes SCR_ItemAttributeCollection "{5222CB039E9715D1}" {
+    ItemDisplayName UIInfo "{5222CB03904B414C}" {
+     Name "84mm MAW HEAT 651 Carrier"
+     Description "Ammo container for 84mm MAW. Contains two HEAT 651 rounds."
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.6
+     SizeSetupStrategy Manual
+     ItemDimensions 20 20 20
+     ItemVolume 2450
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{52BCBDD2B54658EC}" {
+      CameraPreset Top
+      CameraOrbitAngles 0 180 100
+      CameraDistanceToItem 2.4
+      FOV 10
+      PreviewModel "{C7ABED41290867DE}Assets/Items/Equipment/Backpacks/Backpack_84mm_MAW_Carrier/MAW_84mm_HEAT_651_Carrier_02.xob"
+      LodModel 0
+     }
+    }
+    m_Size SLOT_2x1
+   }
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 2400
+   MaxItemSize 20 20 30
+   InitialStorageSlots {
+    SCR_EquipmentStorageSlot round_one {
+     Prefab "{27AC9FC7F5E2BEEB}Prefabs/Weapons/Magazines/MK153/Container_MK153_HEDP.et"
+    }
+    SCR_EquipmentStorageSlot round_two {
+     Prefab "{2C935EF6F98E6354}Prefabs/Weapons/Magazines/MK153/Container_MK153_HEAA.et"
+    }
+   }
+   m_fMaxWeight 40
+  }
+  BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
+   Slots {
+    LoadoutSlotInfo "{511E9C6A327EA2E2}" {
+    }
+   }
+   WornModel "{1D813A7B52784C48}Assets/Items/Equipment/Backpacks/Backpack_84mm_MAW_Carrier/MAW_84mm_HEAT_651_Carrier_Worn_02.xob"
+   ItemModel "{C7ABED41290867DE}Assets/Items/Equipment/Backpacks/Backpack_84mm_MAW_Carrier/MAW_84mm_HEAT_651_Carrier_02.xob"
+   SoundInt 810
+   AreaTypeWhenModelChange {
+    LoadoutArmoredVestSlotArea "{6992C7B464EAC53B}" {
+    }
+   }
+  }
+  ActionsManagerComponent "{511E9C6ADE70F786}" {
+   ActionContexts {
+    UserActionContext "{511E9C6ADE70F788}" {
+     Position PointInfo "{511E9C6ADE70F78D}" {
+      Offset 0 0.1 0
+     }
+     Radius 1
+    }
+   }
+  }
+ }
+ coords 0.32 1.004 -2.75
+}

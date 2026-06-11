@@ -1,0 +1,118 @@
+GenericEntity : "{9CF19D872D4D1C00}Prefabs/Weapons/HeavyWeapons/HMG_M2HB_pintle.et" {
+ ID "476AE74DE20E1061"
+ components {
+  WeaponSoundComponent "{5A8685198A9AEEDD}" {
+   Filenames {
+    "{1A619AD876DD71BE}Sounds/Weapons/Attachments/Underbarrel/M203/Weapons_Attch_Underbarrel_M203_Shot.acp" "{4928189A8BCB7932}Sounds/Vehicles/Wheeled/M998/Vehicles_M998_Turret.acp" "{EC7E8631CBC17F15}Sounds/Weapons/HeavyWeapons/M2/Weapons_HeavyWeapons_M2_Handling.acp"
+   }
+  }
+  MeshObject "{CFBAA4B701F95D69}" {
+   Object "{2579DBF78D895236}Assets/Weapons/HeavyWeapons/MK19/Mk19_Mounted_MK64_MOD_4.xob"
+  }
+  TurretComponent "{6D6D283BE816D8C3}" {
+   CameraAdsAttachment PointInfo "{6992C7B34778194E}" {
+   }
+   ikTargets {
+    AnimationIKTargetInfo "{52A8F6FBFC729D0C}" {
+     PositionInfo PointInfo "{52A8F6FBF92A2E39}" {
+      PivotID "v_hand_L_target"
+      Offset -0.0176 -0.0768 0.0056
+     }
+    }
+    AnimationIKTargetInfo "{52A8F6FBFD4FABD2}" {
+     PositionInfo PointInfo "{52A8F6FBF1B039F8}" {
+      PivotID "v_hand_R_target"
+      Offset 0.0097 0.0746 0.0002
+     }
+    }
+   }
+  }
+  SlotManagerComponent "{6992C7B3477816BC}" {
+   Slots {
+    EntitySlotInfo Shield {
+     PivotID "w_root"
+     Offset -0.0024 -2.0414 -0.3552
+     Enabled 0
+     Prefab "{D7B72696E407AF87}Prefabs/Vehicles/Wheeled/M998/VehParts/Turrets/Gun_Shield_GPK_Mk19.et"
+    }
+   }
+  }
+  WeaponComponent "{CFBAA4B706BA66E8}" {
+   components {
+    SightsComponent "{BB23A637957CFFF8}" {
+     SightsPosition PointInfo "{BB23A63796688E69}" {
+      PivotID "eye"
+     }
+     SightsRanges {
+      SightRangeInfo "{6992C7B3477816A5}" {
+       Range 0 300
+       WeaponPosition PointInfo "{6992C7B3477816A6}" {
+        PivotID "eye"
+       }
+      }
+     }
+     SightsPointFront PointInfo "{6992C7B3477816A8}" {
+      PivotID "eye"
+     }
+     SightsPointRear PointInfo "{6992C7B3477816AA}" {
+      PivotID "eye"
+     }
+    }
+    MuzzleComponent "{50F64C4591CD7AA6}" {
+     components {
+      CaseEjectingEffectComponent "{5122AAD190FCA21D}" {
+       ParticleEffect "{CC91271CF8BC6BBF}Particles/Weapon/Casings_30x29mm_VOG17M/Casings_30x29mm_VOG17M.ptc"
+      }
+      CaseEjectingEffectComponent "{52D4A6D19FE1F420}" {
+       Enabled 0
+      }
+      CaseEjectingEffectComponent "{56D2FD459B34A0B8}" {
+       Enabled 0
+      }
+      SCR_MuzzleEffectComponent "{C9B3271BB22CDB68}" {
+       ParticleEffect "{2062FCAF09834699}Particles/Weapon/Smoke_M203.ptc"
+       EffectPosition EntitySlotInfo "{C9B3271BB85B5D32}" {
+        Offset 0 -0.0136 -0.5238
+       }
+      }
+     }
+     MuzzleEndPositions {
+      PointInfo "{B80A64F4B6CFB9BF}" {
+       Offset 0 -0.0136 -0.5238
+      }
+     }
+     ProjectileSpawnPositions {
+      PointInfo "{50F64C476EC435CA}" {
+       Offset 0 -0.0148 0.1179
+       Angles 0.2101 0 0
+      }
+     }
+     FireModes {
+      BaseFireMode "{B80A64F4A8EF8333}" {
+       RoundsPerMinute 375
+      }
+     }
+     MagazineWell MagazineWellMK19 "{476AE746AB0E8948}" {
+     }
+     DispersionRange 300
+     UIInfo MuzzleUIInfo "{2FBBA72C906C627E}" {
+      m_sCaliber "#TF-Weapon-MK19-Magazine-Well-Info"
+     }
+     MagazinePosition InventoryStorageSlot "{B80A64F4C834E9CB}" {
+      PivotID "w_magazine"
+      Offset 0.1788 -0.0894 -0.0433
+      Angles 0 0 -0.4985
+     }
+     MagazineTemplate "{928CAC2A1FB43429}Prefabs/Weapons/Magazines/MK_19/Magazine_40mm_MK19_48rnd_Base.et"
+    }
+    WeaponAnimationComponent "{60B4EA76EB15F6E0}" {
+     AnimGraph "{2867876B82738D30}Assets/Weapons/HeavyWeapons/workspaces/Mk19_turret.agr"
+     AnimInstance "{F93F22CF5568022B}Assets/Weapons/HeavyWeapons/workspaces/Mk19_Weapon_turret.asi"
+    }
+   }
+   UIInfo WeaponUIInfo "{CC3BA6A2C42F09F4}" {
+    Name "Mk 19 Mod 4"
+   }
+  }
+ }
+}

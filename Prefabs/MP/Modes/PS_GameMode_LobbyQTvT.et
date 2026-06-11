@@ -1,7 +1,13 @@
 PS_GameModeQuickTvT : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
  ID "56B2B479C6B96951"
+ m_fAutoReloadTime 5
+ m_bRemoveRedundantUnits 1
+ m_bRemoveSquadMarkers 1
  m_iFreezeTime 180000
  m_bReserveSlots 0
+ m_bDisableVanillaGroupMenu 1
+ m_bDisableGarbageSystem 1
+ m_bFreezeTimeShootingForbiden 1
  m_iFactionsBalance 3
  m_iPreviewTime 120000
  m_iSlotsTime 120000

@@ -17,7 +17,7 @@ modded class PS_PlayableManager
 	}
 	
 	
-	override void SetFactionReady(FactionKey factionKey, int readyValue)
+	/*override void SetFactionReady(FactionKey factionKey, int readyValue)
 	{
 		Rpc(RPC_SetFactionReady, factionKey, readyValue);
 		
@@ -52,6 +52,6 @@ modded class PS_PlayableManager
 			GetGame().GetCallqueue().CallLater(StartTimeBriefing, 1000, true);
 			
 		}
-	}
+	}*/
 	
 };

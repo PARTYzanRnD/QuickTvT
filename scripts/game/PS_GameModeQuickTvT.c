@@ -48,8 +48,8 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 	[RplProp()]
 	protected int m_iStepTime;
 
-	[Attribute("-1", UIWidgets.Auto, "", category: "Reforger Lobby (WIP)")]
-	protected int m_iFactionsBalance;
+	//[Attribute("-1", UIWidgets.Auto, "", category: "Reforger Lobby (WIP)")]
+	//protected int m_iFactionsBalance;
 	
 	
 	protected ref map<string, bool> m_mDefendFlagPlayers = new map<string, bool>();
@@ -503,7 +503,7 @@ sealed class PS_GameModeQuickTvT : PS_GameModeCoop
 		GetGame().GetCallqueue().Remove(CheckAlive);
 	}
 
-	bool CanJoinFaction(FactionKey factionKeyPlayer, FactionKey currentFaction)
+	override bool CanJoinFaction(FactionKey factionKeyPlayer, FactionKey currentFaction)
 	{
 		if (m_iFactionsBalance == -1)
 			return true;

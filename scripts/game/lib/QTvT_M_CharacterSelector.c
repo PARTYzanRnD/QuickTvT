@@ -1,4 +1,4 @@
-/*modded class PS_CharacterSelector
+modded class PS_CharacterSelector
 {
 	override void OnClicked(SCR_ButtonBaseComponent button)
 	{
@@ -7,40 +7,53 @@
 			m_bStateClickSkip = false;
 			return;
 		}
-
-		int playerId = m_CoopLobby.GetSelectedPlayer();
-		if (m_iPlayerId == -2)
+		
+		PS_SlotCharacterData slotData;
+		if (!m_PlayableManager || !m_PlayableManager.FindSlotData(m_iPlayableId, slotData))
+			return;
+		
+		int slotOccupant = slotData.m_PlayerId;
+		int selectedPlayerId = -1;
+		if (m_CoopLobby)
+			selectedPlayerId = m_CoopLobby.GetSelectedPlayer();
+		int currentPlayerId = GetCurrentPlayerId();
+		
+		PS_PlayableControllerComponent pcc = GetControllerComp();
+		SCR_EGameModeState gameState = SCR_EGameModeState.PREGAME;
+		if (m_GameModeCoop)
+			gameState = m_GameModeCoop.GetState();
+		
+		// Locked slot
+		if (slotOccupant == -2)
 		{
-			m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
-			AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
+			if (m_CoopLobby) m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
+			SCR_UISoundEntity.SoundEvent("SOUND_FE_BUTTON_FAIL");
 			return;
 		}
-		if (m_iPlayerId > 0 && playerId != m_iPlayerId)
+		
+		// Can't take someone else's slot
+		if (slotOccupant > 0 && selectedPlayerId != slotOccupant && !PS_PlayersHelper.IsAdminOrServer())
 		{
-			m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
-			AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
+			if (m_CoopLobby) m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
 			return;
 		}
-		PS_PlayableContainer playableContainer = m_PlayableManager.GetPlayableById(m_iPlayableId);
-		if (playableContainer.GetDamageState() == EDamageState.DESTROYED)
-		{
-			m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
-			AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
-			return;
-		}
-
-		SCR_EGameModeState gameState = m_GameModeCoop.GetState();
+		
+		// Briefing guard
 		if (!PS_PlayersHelper.IsAdminOrServer())
 		{
-			RplId playableId = m_PlayableManager.GetPlayableByPlayer(m_iCurrentPlayerId);
-			if (gameState == SCR_EGameModeState.BRIEFING && playableId != RplId.Invalid())
+			RplId currentPlayableId = m_PlayableManager.GetPlayableByPlayer(currentPlayerId);
+			if (gameState == SCR_EGameModeState.BRIEFING && currentPlayableId != RplId.Invalid())
 			{
-				m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
+				if (m_CoopLobby) m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
 				return;
 			}
 		}
-
-		if (playerId != m_iPlayerId)
+		
+		if (!pcc)
+			return;
+		
+		// Faction balance check (admins bypass)
+		if (!PS_PlayersHelper.IsAdminOrServer() && slotData.m_FactionKey != "")
 		{
 			PS_GameModeQuickTvT gameModeQuickTvT = PS_GameModeQuickTvT.Cast(GetGame().GetGameMode());
 			Print(string.Format("[DefendFlag] OnClicked - m_sFactionKey=%1, m_iCurrentPlayerId=%2, gameModeQuickTvT=%3", m_sFactionKey, m_iCurrentPlayerId, gameModeQuickTvT));
@@ -57,7 +70,23 @@
 				m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
 				AudioSystem.PlaySound("{C97850E4341F0CF9}Sounds/UI/Samples/Menu/UI_Button_Fail.wav");
 				return;
-			}*/
+			}
+			
+			
+			
+			if (!CanJoinFaction(slotData.m_FactionKey))
+			{
+				FactionKey currentFaction = m_PlayableManager.GetPlayerFactionKey(m_iCurrentPlayerId);
+				PS_DebugLogger.LogImportant("PS_CharacterSelector FACTION BALANCE REJECTED targetFaction=" + slotData.m_FactionKey + " currentFaction=" + currentFaction, m_iCurrentPlayerId);
+				SCR_ChatPanelManager chatPanelManager = SCR_ChatPanelManager.GetInstance();
+				ChatCommandInvoker invoker = chatPanelManager.GetCommandInvoker("lmsg");
+				invoker.Invoke(null, "Где баланс?");
+				SCR_ChatPanelManager.GetInstance().ShowHelpMessage("Соблюдайте баланс сторон");
+				if (m_CoopLobby) m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
+				return;
+			}
+			
+			///////////////////////////////////balance and rotation //////////////////////
 			//RplId playableId = m_PlayableManager.GetPlayableByPlayer(m_iPlayerId);
 			/*
 			SCR_GroupsManagerComponent groupsManagerComponent = SCR_GroupsManagerComponent.GetInstance();
@@ -66,39 +95,35 @@
 			if (playerGroup)
 				leaderCharacter = SCR_ChimeraCharacter.Cast(playerGroup.GetLeaderEntity());
 			Print("[l leaderCharacter " + leaderCharacter);*/
-			/*if (!CanJoinFaction())
-			{
-
-				SCR_ChatPanelManager chatPanelManager = SCR_ChatPanelManager.GetInstance();
-				ChatCommandInvoker invoker = chatPanelManager.GetCommandInvoker("lmsg");
-				invoker.Invoke(null, "Где баланс?");
-				SCR_ChatPanelManager.GetInstance().ShowHelpMessage("Соблюдайте баланс сторон");
-				m_CoopLobby.SetPreviewPlayable(m_iPlayableId, true);
-				return;
-			}
-
-			AudioSystem.PlaySound("{9500A96BBA3B0581}Sounds/UI/Samples/Menu/UI_Gadget_Select.wav");
-			m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, m_sPlayableCallsign);
-			m_PlayableControllerComponent.ChangeFactionKey(playerId, m_sFactionKey);
-			m_PlayableControllerComponent.SetPlayerState(playerId, PS_EPlayableControllerState.NotReady);
-			m_PlayableControllerComponent.SetPlayerPlayable(playerId, m_iPlayableId);
-		} else {
-			AudioSystem.PlaySound("{9500A96BBA3B0581}Sounds/UI/Samples/Menu/UI_Gadget_Select.wav");
-			m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Faction");
-			m_PlayableControllerComponent.ChangeFactionKey(playerId, "");
-			m_PlayableControllerComponent.SetPlayerState(playerId, PS_EPlayableControllerState.NotReady);
-			m_PlayableControllerComponent.SetPlayerPlayable(playerId, RplId.Invalid());
-			if (PS_PlayersHelper.IsAdminOrServer())
-				m_PlayableControllerComponent.UnpinPlayer(playerId);
+			
 		}
-
-		if (PS_PlayersHelper.IsAdminOrServer() && playerId != m_iCurrentPlayerId && gameState == SCR_EGameModeState.GAME)
-			m_PlayableControllerComponent.ForceSwitch(playerId);
-		if (!PS_PlayersHelper.IsAdminOrServer() && playerId == m_iCurrentPlayerId && gameState == SCR_EGameModeState.BRIEFING)
-			m_PlayableControllerComponent.SwitchToMenuServer(SCR_EGameModeState.BRIEFING);
+		
+		if (slotOccupant > 0 && selectedPlayerId == slotOccupant)
+		{
+			// Vacate own slot
+			SCR_UISoundEntity.SoundEvent("SOUND_HUD_GADGET_SELECT");
+			GetGame().GetCallqueue().Call(pcc.SetPlayerState, selectedPlayerId, PS_EPlayableControllerState.NotReady);
+			GetGame().GetCallqueue().Call(pcc.SetPlayerToSlot, RplId.Invalid(), selectedPlayerId);
+			if (PS_PlayersHelper.IsAdminOrServer())
+				GetGame().GetCallqueue().Call(pcc.UnpinPlayer, selectedPlayerId);
+		}
+		else
+		{
+			// Assign to slot + open inventory preview (matches vanilla behavior)
+			SCR_UISoundEntity.SoundEvent("SOUND_HUD_GADGET_SELECT");
+			GetGame().GetCallqueue().Call(pcc.SetPlayerState, selectedPlayerId, PS_EPlayableControllerState.NotReady);
+			GetGame().GetCallqueue().Call(pcc.SetPlayerToSlot, m_iPlayableId, selectedPlayerId);
+			if (m_CoopLobby)
+				GetGame().GetCallqueue().Call(m_CoopLobby.SetPreviewPlayable, m_iPlayableId, false);
+		}
+		
+		if (PS_PlayersHelper.IsAdminOrServer() && selectedPlayerId != currentPlayerId && gameState == SCR_EGameModeState.GAME)
+			GetGame().GetCallqueue().Call(pcc.ForceSwitch, selectedPlayerId);
+		if (!PS_PlayersHelper.IsAdminOrServer() && selectedPlayerId == currentPlayerId && gameState == SCR_EGameModeState.BRIEFING)
+			GetGame().GetCallqueue().Call(pcc.SwitchToMenuServer, SCR_EGameModeState.BRIEFING);
 	}
 
-};*/
+};
 
 
 /*modded class PS_ContextMenu : SCR_ScriptedWidgetComponent

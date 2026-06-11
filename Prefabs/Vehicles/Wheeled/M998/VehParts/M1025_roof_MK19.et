@@ -1,0 +1,20 @@
+GenericEntity : "{343EC0126CCD0F58}Prefabs/Vehicles/Wheeled/M998/VehParts/M1025_roof.et" {
+ ID "4B42E71698F5739C"
+ components {
+  SlotManagerComponent "{54F2B37F3202E099}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{141218E4CB9093D8}Prefabs/Vehicles/Wheeled/M998/VehParts/M1025_gun_mount_MK19.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterWeapons 1
+     RegisterCompartments 1
+    }
+   }
+  }
+  ActionsManagerComponent "{6992C7B366ABEF0C}" {
+   AllowCrossHierarchy 1
+  }
+ }
+}

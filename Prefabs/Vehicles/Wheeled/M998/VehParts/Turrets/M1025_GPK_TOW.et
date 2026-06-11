@@ -1,0 +1,189 @@
+Turret : "{8C68C54F9C50A9AF}Prefabs/Vehicles/Wheeled/M998/VehParts/M1025_gun_mount.et" {
+ ID "51ACD0965653D003"
+ components {
+  EquipedWeaponStorageComponent "{5486E393FA201445}" {
+   Enabled 0
+  }
+  MeshObject "{51ACD09C4E0B7D16}" {
+   Object "{D9302DC303CC44E3}Assets/Vehicles/Wheeled/M1151/Data/GPK_M1167.xob"
+   Materials {
+    MaterialAssignClass "{6992C7B2A1873B6B}" {
+     SourceMaterial "GPK_M1167_Calculation_Module"
+     AssignedMaterial "{924A48CD0B5FCBBF}Assets/Vehicles/Wheeled/M1151/Data/GPK_M1167_Calculation_Module.emat"
+    }
+   }
+  }
+  RigidBody "{51ACD09C423F175F}" {
+   Static 0
+   Kinematic 1
+  }
+  ProcAnimComponent "{51ACD09DB14C45C0}" {
+   Parameters {
+    ProcAnimParams "{54F1010AE098CCEB}" {
+     ResourceName "{6D4CF2EAD22A4D26}Prefabs/Vehicles/Wheeled/M998/ProcAnims/TurretHUMVEE.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{6992C7B2A1873B57}" {
+     ResourceName "{D92C53E731CE73EE}Anims/proc/M1167_down.pap"
+     BoneNames {
+      "v_turret_01_rear_shield" "v_turret_01_gunner_hatch" "v_turret_01_left_shield"
+     }
+     SimulationDistance 1000
+     AlwaysSimulateOwner 1
+    }
+   }
+  }
+  SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{60F6E79ABD1B5BFD}" {
+     AnimDoorIndex 5
+    }
+   }
+   CompartmentSlots {
+    TurretCompartmentSlot TurretCompartment {
+     CompartmentAction SCR_GetInUserAction "{5086CC2CFDD3A05A}" {
+      ParentContextList +{
+      }
+      CanAggregate 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D566648F37562}" {
+      CanAggregate 1
+     }
+     PassengerPositionInfo EntitySlotInfo "{B1CB25848A3D93A8}" {
+      Offset 0 0.0417 -0.1697
+      Angles 0 0 0
+     }
+     AllowAiming 1
+    }
+   }
+  }
+  SCR_TurretControllerComponent "{51ACD09C61C183E4}" {
+   LimitsHoriz -3 30
+   LimitsVert -3 15
+   EnableGyroAiming 1
+  }
+  SCR_UniversalInventoryStorageComponent "{54C8A16E6F5ADEDE}" {
+   MultiSlots {
+    MultiSlotConfiguration "{6992C7B2A1873B42}" {
+     SlotTemplate InventoryStorageSlot M2ammunition {
+      Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+     }
+     NumSlots 4
+    }
+   }
+  }
+  TF_SACLOS_MissileController "{6992C7B2A1873B46}" {
+   m_bDeactivePrevMissile 1
+   m_bIsATGM 1
+   m_bSightInWeapon 1
+   m_bCanReloadWhenActive 0
+  }
+  TF_WeaponReloadComponent "{6992C7B2A1873B47}" {
+   m_ImpulsTo PointInfo "{6992C7B2A1873B48}" {
+    PivotID "v_turret_vertical_rotation"
+    Offset 0 0.0965 -1.8137
+   }
+   m_fImpulseStrength 3
+   m_SupportedMagazine MagazineWellTow "{6992C7B2A1873B4A}" {
+   }
+   m_DetachSound SCR_AudioSourceConfiguration "{6992C7B2A1873B4D}" {
+    m_sSoundProject "{EEAE2427DD990D12}Sounds/Weapons/AircraftWeapons/RocketPods/Weapons_RocketPods_Generic_Handling.acp"
+    m_sSoundEventName "SOUND_UNLOAD"
+   }
+   m_AttachSound SCR_AudioSourceConfiguration "{6992C7B2A1873B4F}" {
+    m_sSoundProject "{EEAE2427DD990D12}Sounds/Weapons/AircraftWeapons/RocketPods/Weapons_RocketPods_Generic_Handling.acp"
+    m_sSoundEventName "SOUND_PYLON_ATTACH"
+   }
+  }
+  TF_ATGMWeaponSlotComponent "{51ACD09C6BFEEE6A}" {
+   AttachType InventoryStorageSlot "{0AACE7470E421D82}" {
+    PivotID "v_turret_horrizontal_rotation"
+    Offset -0.2402 -1.938 0.1341
+    MergePhysics 0
+   }
+   WeaponTemplate "{C4D213991B7AD44A}Prefabs/Weapons/HeavyWeapons/BGM71TOW/M1167_TOW.et"
+  }
+  SlotManagerComponent "{6992C7B2A18738B3}" {
+   Slots {
+    RegisteringComponentSlotInfo Hatch {
+     PivotID "v_turret_01_gunner_hatch"
+     MergePhysics 1
+     Enabled 0
+     Prefab "{E025FC2418AC7C55}Prefabs/Vehicles/Wheeled/M998/Door/M1167_Hatch.et"
+     DeactivatePhysicsOnAtaching 1
+     UpdateReplicationParent 0
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo rear_Shield {
+     PivotID "v_turret_01_rear_shield"
+     MergePhysics 1
+     Enabled 0
+     Prefab "{811D50B62A9A4A0C}Prefabs/Vehicles/Wheeled/M998/Door/M1167_rear_Shield.et"
+     DeactivatePhysicsOnAtaching 1
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo L_Shield {
+     PivotID "v_turret_01_left_shield"
+     MergePhysics 1
+     Enabled 0
+     Prefab "{60D1BCDA4BC869F9}Prefabs/Vehicles/Wheeled/M998/Door/M1167_L_Shield.et"
+     DeactivatePhysicsOnAtaching 1
+     RegisterDamage 1
+    }
+   }
+  }
+  ActionsManagerComponent "{51ACD09C7181BA0B}" {
+   ActionContexts {
+    UserActionContext "{6992C7B2A18738B8}" {
+     UIInfo SCR_ActionContextUIInfo "{6992C7B2A18738BA}" {
+     }
+     ContextName "Alo"
+     Position PointInfo "{6992C7B2A18738BB}" {
+      PivotID "gunner_idle"
+      Offset -0.6221 1.3708 -0.6236
+      Angles 0 63.278 0
+     }
+     Radius 0.3
+    }
+   }
+   additionalActions {
+    TF_FlipMeshUserAction "{6992C7B2A18738DA}" {
+     ParentContextList {
+      "Alo"
+     }
+     UIInfo UIInfo "{6992C7B2A18738DB}" {
+      Name "Flip"
+     }
+     Duration 0.5
+     CanAggregate 1
+     PerformPerFrame 0
+     m_signalConfigs {
+      TF_FlipMeshSignalConfig "{6992C7B2A18738DE}" {
+       m_signalName "DownShield"
+       m_isFoldedByDefault 0
+       m_foldedAngle 75
+      }
+      TF_FlipMeshSignalConfig "{6992C7B2A18738DF}" {
+       m_signalName "DownHatch"
+       m_isFoldedByDefault 0
+       m_foldedAngle 65
+      }
+      TF_FlipMeshSignalConfig "{6992C7B2A18738C0}" {
+       m_signalName "DownLShield"
+       m_isFoldedByDefault 0
+       m_foldedAngle 90
+      }
+     }
+    }
+   }
+  }
+  BaseItemAnimationComponent "{5242E42C7B4B2CEE}" {
+   AnimInjection AnimationAttachmentInfo "{5242E42C74AC2BF7}" {
+    AnimGraph "{6791BE2144ADC6A3}Assets/Weapons/HeavyWeapons/workspaces/M2HB_m998.agr"
+    AnimInstance "{6C73754244FE9C94}Assets/Weapons/HeavyWeapons/workspaces/M2HB_Player_m998.asi"
+   }
+  }
+ }
+ coords 1703.893 39 2825.006
+}
