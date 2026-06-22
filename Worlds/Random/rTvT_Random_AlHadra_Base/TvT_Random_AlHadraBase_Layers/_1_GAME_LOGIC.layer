@@ -1,7 +1,6 @@
 GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
  components {
   GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
-   
    m_sMessageDefendWin "Атака понесла критические потери! Победа обороны!"
    m_sMessageAttackWin "Оборона понесла критические потери, Победа Атаки!"
    m_aObjectiveNames {
@@ -30,8 +29,8 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
     GUB_FactionPrefab "{694ACE30874FD4BA}" : "{9ACCE36007037FB5}Configs/RandomPrefabConfig_UK89_D.conf" {
     }
    }
-   m_fMinDistanceBetweenLocations 700
-   m_fMaxDistanceBetweenLocations 2600
+   m_fMinDistanceBetweenLocations 600
+   m_fMaxDistanceBetweenLocations 2200
    m_bMarkersOnlyOnBriefing 1
    m_MarkerMakerConfigPath "{F4A0B8B3CF446139}Configs/MarkerMakerConfig_Random.conf"
   }

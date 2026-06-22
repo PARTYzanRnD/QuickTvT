@@ -339,7 +339,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iSquadCallsign 2
     }
     Recon_Attack_13 {
-     coords -77.084 27.889 -439.689
+     coords 189.502 -1.857 8.902
      angles 0 177.389 0
      m_eGroupType Recon
      m_iCompanyCallsign 3
@@ -381,7 +381,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 -178.993 0
     }
     {
-     coords -79.017 27.874 -442.105
+     coords 189.381 -1.861 4.995
      angles 0 106.447 0
     }
    }
@@ -536,8 +536,8 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      m_iSquadCallsign 2
     }
     Recon_Attack_25 {
-     coords -6.398 30.603 1107.896
-     angles 0 177.753 0
+     coords 197.77 4.628 96.965
+     angles 0 157.07 0
      m_eGroupType Recon
      m_iCompanyCallsign 3
      m_iSquadCallsign 4
@@ -578,8 +578,8 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
      angles 0 157.391 0
     }
     {
-     coords -8.346 30.101 1105.492
-     angles 0 106.811 0
+     coords 197.68 1.257 92.414
+     angles 0 86.128 0
     }
     {
      coords 694.188 -0.935 -564.098

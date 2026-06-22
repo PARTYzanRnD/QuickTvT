@@ -1677,8 +1677,8 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
  DEFEND_MOSQUE {
   coords 6380.79 17.844 2979.346
   angles 0 0 0
-  m_sFlagName "FLAG_SOUTHVIL"
-  m_sPolyzoneEntityName "Zone_southvil"
+  m_sFlagName "FLAG_MOSQUE"
+  m_sPolyzoneEntityName "Zone_mosque"
   {
    $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
     Squad_17 {
@@ -2012,8 +2012,8 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
  DEFEND_DVORSOUTH {
   coords 4115.323 17.843 4734.575
   angles 0 0 0
-  m_sFlagName "FLAG_SOUTHVIL"
-  m_sPolyzoneEntityName "Zone_southvil"
+  m_sFlagName "FLAG_DVORSO"
+  m_sPolyzoneEntityName "Zone_dvorso"
   {
    $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
     Squad_20 {
@@ -2059,7 +2059,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
    SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
     coords 14.204 -0.464 -17.164
    }
-   PolylineShapeEntity Zone_mosque2 : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+   PolylineShapeEntity Zone_dvorso : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
     components {
      PS_PolyZone "{60E90266F25533F6}" {
       m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
@@ -2078,247 +2078,447 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
       }
      }
     }
-    coords 0 0 0
+    coords -23.734 0 -3.654
     Points {
      ShapePoint "{60E90266E922A02A}" {
-      Position 600 0 0
-     }
-     ShapePoint "{692CA5EF92361C1A}" {
-      Position 598.15 0 47.075
-     }
-     ShapePoint "{692CA5EF937D0F24}" {
-      Position 592.613 0 93.86
-     }
-     ShapePoint "{692CA5EF9E3921DE}" {
-      Position 583.422 0 140.067
-     }
-     ShapePoint "{692CA5EF9F65D668}" {
-      Position 570.634 0 185.41
-     }
-     ShapePoint "{692CA5EF9A923DBC}" {
-      Position 554.328 0 229.61
-     }
-     ShapePoint "{692CA5EF9BBF85B4}" {
-      Position 534.604 0 272.394
-     }
-     ShapePoint "{692CA5EF98F599E9}" {
-      Position 511.584 0 313.499
-     }
-     ShapePoint "{692CA5EF993C8DC6}" {
-      Position 485.41 0 352.671
-     }
-     ShapePoint "{692CA5EF86BCA49B}" {
-      Position 456.244 0 389.669
-     }
-     ShapePoint "{692CA5EF87D68C9A}" {
-      Position 424.264 0 424.264
-     }
-     ShapePoint "{692CA5EF848F9457}" {
-      Position 389.669 0 456.244
-     }
-     ShapePoint "{692CA5EF89D70FD3}" {
-      Position 352.671 0 485.41
-     }
-     ShapePoint "{692CA5EFB621FBF8}" {
-      Position 313.499 0 511.584
-     }
-     ShapePoint "{692CA5EFB37F66D0}" {
-      Position 272.394 0 534.604
-     }
-     ShapePoint "{692CA5EFB0D8ECD2}" {
-      Position 229.61 0 554.328
-     }
-     ShapePoint "{692CA5EFBF9437D8}" {
-      Position 185.41 0 570.634
-     }
-     ShapePoint "{692CA5EFBDCFAB22}" {
-      Position 140.067 0 583.422
-     }
-     ShapePoint "{692CA5EFBB6F8244}" {
-      Position 93.86 0 592.613
-     }
-     ShapePoint "{692CA5EFB9332779}" {
-      Position 47.075 0 598.15
-     }
-     ShapePoint "{692CA5EFA7E86A80}" {
-      Position 0 0 600
-     }
-     ShapePoint "{692CA5EFA2B1C827}" {
-      Position -47.075 0 598.15
-     }
-     ShapePoint "{692CA5EFAED284A5}" {
-      Position -93.86 0 592.613
-     }
-     ShapePoint "{692CA5EFAC519B08}" {
-      Position -140.067 0 583.422
-     }
-     ShapePoint "{692CA5EFAA1E5620}" {
-      Position -185.41 0 570.634
-     }
-     ShapePoint "{692CA5EFAB45E100}" {
-      Position -229.61 0 554.328
-     }
-     ShapePoint "{692CA5EFA90445FA}" {
-      Position -272.394 0 534.604
-     }
-     ShapePoint "{692CA5EF54E6785B}" {
-      Position -313.499 0 511.584
-     }
-     ShapePoint "{692CA5EF550699DD}" {
-      Position -352.671 0 485.41
-     }
-     ShapePoint "{692CA5EF52C1545D}" {
-      Position -389.669 0 456.244
-     }
-     ShapePoint "{692CA5EF51A7470A}" {
-      Position -424.264 0 424.264
-     }
-     ShapePoint "{692CA5EF5E3AD8EA}" {
-      Position -456.244 0 389.669
-     }
-     ShapePoint "{692CA5EF5C6C87F1}" {
-      Position -485.41 0 352.671
-     }
-     ShapePoint "{692CA5EF5DD27156}" {
-      Position -511.584 0 313.499
-     }
-     ShapePoint "{692CA5EF5B5DB42B}" {
-      Position -534.604 0 272.394
-     }
-     ShapePoint "{692CA5EF592E81AA}" {
-      Position -554.328 0 229.61
-     }
-     ShapePoint "{692CA5EF468D0304}" {
-      Position -570.634 0 185.41
-     }
-     ShapePoint "{692CA5EF42A0493B}" {
-      Position -583.422 0 140.067
-     }
-     ShapePoint "{692CA5EF43F78ED0}" {
-      Position -592.613 0 93.86
-     }
-     ShapePoint "{692CA5EF40B37655}" {
-      Position -598.15 0 47.075
-     }
-     ShapePoint "{692CA5EF7744C87F}" {
-      Position -600 0 0
-     }
-     ShapePoint "{692CA5EF6326A85A}" {
-      Position -598.15 0 -47.075
-     }
-     ShapePoint "{692CA5EF60287DFB}" {
-      Position -592.613 0 -93.86
-     }
-     ShapePoint "{692CA5EF6E2DC082}" {
-      Position -583.422 0 -140.067
-     }
-     ShapePoint "{692CA5EF6C70D033}" {
-      Position -570.634 0 -185.41
-     }
-     ShapePoint "{692CA5EF6B17EA25}" {
-      Position -554.328 0 -229.61
-     }
-     ShapePoint "{692CA5EF680B211B}" {
-      Position -534.604 0 -272.394
-     }
-     ShapePoint "{692CA5EF1630DCC5}" {
-      Position -511.584 0 -313.499
-     }
-     ShapePoint "{692CA5EF15072D20}" {
-      Position -485.41 0 -352.671
-     }
-     ShapePoint "{692CA5EF138D9C54}" {
-      Position -456.244 0 -389.669
-     }
-     ShapePoint "{692CA5EF10BAE14D}" {
-      Position -424.264 0 -424.264
-     }
-     ShapePoint "{692CA5EF1E8179F6}" {
-      Position -389.669 0 -456.244
-     }
-     ShapePoint "{692CA5EF1CB1DD8F}" {
-      Position -352.671 0 -485.41
-     }
-     ShapePoint "{692CA5EF1A0D89E6}" {
-      Position -313.499 0 -511.584
-     }
-     ShapePoint "{692CA5EF1B571668}" {
-      Position -272.394 0 -534.604
-     }
-     ShapePoint "{692CA5EF19934958}" {
-      Position -229.61 0 -554.328
-     }
-     ShapePoint "{692CA5EF06070701}" {
-      Position -185.41 0 -570.634
-     }
-     ShapePoint "{692CA5EF076C9B99}" {
-      Position -140.067 0 -583.422
-     }
-     ShapePoint "{692CA5EF05E08A5B}" {
-      Position -93.86 0 -592.613
-     }
-     ShapePoint "{692CA5EF020BAC6F}" {
-      Position -47.075 0 -598.15
-     }
-     ShapePoint "{692CA5EF0371F28F}" {
-      Position 0 0 -600
-     }
-     ShapePoint "{692CA5EF0122A635}" {
-      Position 47.075 0 -598.15
-     }
-     ShapePoint "{692CA5EF0FA2E759}" {
-      Position 93.86 0 -592.613
-     }
-     ShapePoint "{692CA5EF0F7077F0}" {
-      Position 140.067 0 -583.422
-     }
-     ShapePoint "{692CA5EF0D2B5E4A}" {
-      Position 185.41 0 -570.634
-     }
-     ShapePoint "{692CA5EF0B9C94A6}" {
-      Position 229.61 0 -554.328
-     }
-     ShapePoint "{692CA5EF08434A45}" {
-      Position 272.394 0 -534.604
-     }
-     ShapePoint "{692CA5EF36DFB7A0}" {
-      Position 313.499 0 -511.584
-     }
-     ShapePoint "{692CA5EF348E70BE}" {
-      Position 352.671 0 -485.41
-     }
-     ShapePoint "{692CA5EF353ECC89}" {
-      Position 389.669 0 -456.244
-     }
-     ShapePoint "{692CA5EF32E32363}" {
-      Position 424.264 0 -424.264
-     }
-     ShapePoint "{692CA5EF336FC313}" {
-      Position 456.244 0 -389.669
-     }
-     ShapePoint "{692CA5EF31B511FF}" {
-      Position 485.41 0 -352.671
-     }
-     ShapePoint "{692CA5EF3EA319A8}" {
-      Position 511.584 0 -313.499
-     }
-     ShapePoint "{692CA5EF3E7E5F3A}" {
-      Position 534.604 0 -272.394
-     }
-     ShapePoint "{692CA5EF3FC11950}" {
-      Position 554.328 0 -229.61
-     }
-     ShapePoint "{692CA5EF3C49482A}" {
-      Position 570.634 0 -185.41
-     }
-     ShapePoint "{692CA5EF3AC96D15}" {
-      Position 583.422 0 -140.067
-     }
-     ShapePoint "{692CA5EF3BE7FDF4}" {
-      Position 592.613 0 -93.86
-     }
-     ShapePoint "{692CA5EF39A53B25}" {
-      Position 598.15 0 -47.075
+      Position 32.129 0 -171.916
+     }
+     ShapePoint "{69AC8D57A0DB639C}" {
+      Position -93.546 0 -39.515
+     }
+     ShapePoint "{69AC8D5795CC256D}" {
+      Position 80.039 0 108.867
+     }
+     ShapePoint "{69AC8D5797CB5E9B}" {
+      Position 195.641 0 -18.716
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORWEST {
+  coords 3995.187 16.899 4781.427
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORWEST"
+  m_sPolyzoneEntityName "Zone_dvorwest"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_23 {
+     coords 14.504 -2.236 -11.924
+     angles 0 48.339 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_24 {
+     coords 18.494 5.237 5.431
+     angles 0 137.268 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_9 {
+     coords -16.436 -4.238 -27.214
+     angles 0 -42.949 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_9 {
+     coords -3.441 -3.388 -16.558
+     angles 0 -41.794 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_9 {
+     coords 26.967 -2.171 -16.836
+     angles 0 -22.251 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_25 {
+     coords 36.652 -2.552 0.364
+     angles 0 -136.48 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+   PolylineShapeEntity Zone_dvorwest : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -7.69 0.945 -8.667
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 11.091 0 -81.563
+     }
+     ShapePoint "{69AC8D54FED5321C}" {
+      Position -62.276 0 -5.232
+     }
+     ShapePoint "{69AC8D54F8AE14BF}" {
+      Position 35.039 0 81.67
+     }
+     ShapePoint "{69AC8D54E52F3070}" {
+      Position 104.462 0 3.921
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_RUINS {
+  coords 4116.213 17.977 4954.222
+  angles 0 0 0
+  m_sFlagName "FLAG_RUINS"
+  m_sPolyzoneEntityName "Zone_ruins"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_26 {
+     coords 6.595 -2.237 -3.327
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_27 {
+     coords -4.433 0.893 -15.408
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_10 {
+     coords -23.563 -4.747 -20.116
+     angles 0 52.484 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_10 {
+     coords -8.231 -4.238 -36.548
+     angles 0 52.843 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_10 {
+     coords 5.139 -1.986 -50.979
+     angles 0 48.56 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_28 {
+     coords -3.157 -1.411 -30.859
+     angles 0 44.979 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+   PolylineShapeEntity Zone_ruins : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -10.898 -0.133 -24.781
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position -155.609 0 12.216
+     }
+     ShapePoint "{69AC8D53ED2F9A31}" {
+      Position 11.891 0 161.58
+     }
+     ShapePoint "{69AC8D53EE9B517E}" {
+      Position 153.71 0 -0.479
+     }
+     ShapePoint "{69AC8D53EBC9F0EB}" {
+      Position -7.762 0 -148.057
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORNO {
+  coords 4394.207 17.841 4954.479
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORNO"
+  m_sPolyzoneEntityName "Zone_dvorno"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_29 {
+     coords 6.595 -2.237 -3.327
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_30 {
+     coords -0.487 -0.626 3.436
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_11 {
+     coords -19.15 -4.746 23.64
+     angles 0 -11.023 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_11 {
+     coords -1.107 -4.238 13.691
+     angles 0 47.905 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_11 {
+     coords 12.246 -1.982 0.161
+     angles 0 48.56 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_31 {
+     coords -10.842 -1.411 9.577
+     angles 0 134.923 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+   PolylineShapeEntity Zone_dvorno : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -2.17 0.004 -6.76
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 143.09 0 -4.181
+     }
+     ShapePoint "{69AC8D5359C6EE1E}" {
+      Position -6.098 0 -143.369
+     }
+     ShapePoint "{69AC8D53462D2206}" {
+      Position -191.061 0 63.793
+     }
+     ShapePoint "{69AC8D5340697C56}" {
+      Position -43.497 0 195.387
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORMAR {
+  coords 4270.292 20.977 4829.282
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORMAR"
+  m_sPolyzoneEntityName "Zone_dvormar"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_32 {
+     coords -17.083 -2.109 26.24
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_33 {
+     coords -34.697 -0.499 12.194
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_12 {
+     coords -38.744 -4.589 -0.866
+     angles 0 -37.841 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_12 {
+     coords -16.431 -4.408 17.669
+     angles 0 -40.659 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_12 {
+     coords -7.086 -3.576 25.584
+     angles 0 -42.873 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_34 {
+     coords -21.333 -1.454 11.275
+     angles 0 134.923 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   SCR_EditorRestrictionZoneEntity : "{B2A519402E9AC209}PrefabsEditable/RestrictionZone/E_EditorRestrictionZoneLarge.et" {
+    coords 14.204 -0.464 -17.164
+   }
+   PolylineShapeEntity Zone_dvormar : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -39.567 -3.133 0.882
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 71.691 0 -139.523
+     }
+     ShapePoint "{69AC98018269BDB3}" {
+      Position -67.636 0 14.509
+     }
+     ShapePoint "{69AC98018E9571F5}" {
+      Position 36.563 0 106.562
+     }
+     ShapePoint "{69AC98018A4DBE0D}" {
+      Position 174.997 0 -46.027
      }
     }
     {

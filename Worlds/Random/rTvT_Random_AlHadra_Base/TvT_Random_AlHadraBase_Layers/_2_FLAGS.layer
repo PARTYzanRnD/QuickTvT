@@ -1,4 +1,4 @@
-$grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
+$grp GenericEntity : "{F922096EA06089F6}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V2_table_supplies.et" {
  FLAG_WESTVIL {
   coords 2053.768 17.844 5333.077
  }
@@ -16,5 +16,21 @@ $grp GenericEntity : "{F922096EA06089F5}PrefabsEditable/Auto/Structures/Military
  }
  FLAG_MOSQUE {
   coords 6393.201 17.844 2970.678
+ }
+ FLAG_DVORSO {
+  coords 4148.602 17.845 4704.98
+ }
+ FLAG_DVORWEST {
+  coords 4008.094 17.844 4775.454
+ }
+ FLAG_RUINS {
+  coords 4115.459 17.844 4928.314
+ }
+ FLAG_DVORNO {
+  coords 4389.031 17.844 4965.63
+ }
+ FLAG_DVORMAR {
+  coords 4278.297 17.845 4806.163
+  angles 0 141.93 0
  }
 }
