@@ -74,7 +74,7 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     Mechanized_Attack_2 {
      coords 7.845 3.98 36.203
      angles 0 -167.541 0
-     m_eGroupType Mechanized
+     m_eGroupType Sniper
      m_iCompanyCallsign 2
      m_iSquadCallsign 1
     }

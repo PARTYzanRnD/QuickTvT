@@ -242,13 +242,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_2 {
-     coords 12.925 -0.209 -32.077
-     angles 0 -28.876 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_1 {
      coords -8.527 1.104 -41.327
      angles 0 -19.496 0
@@ -264,7 +257,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_1 {
      coords -15.256 1.967 -17.029
      angles 0 -137.139 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_3 {
      coords 10.614 0.391 -65.529
@@ -375,13 +368,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_4 {
-     coords -53.375 1.961 -61.744
-     angles 0 -39.777 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_5 {
      coords -62.943 1.965 -49.925
      angles 0 -36.771 0
@@ -397,7 +383,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_2 {
      coords 27.091 -0.584 3.176
      angles 0 -119.403 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_6 {
      coords 5.905 -0.186 -28.059
@@ -429,13 +415,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_7 {
-     coords -42.913 -4.38 44.493
-     angles 0 77.67 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_8 {
      coords 61.907 -1.82 -22.09
      angles 0 166.831 0
@@ -451,7 +430,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_3 {
      coords 39.443 -1.886 22.774
      angles 0 -102.004 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_9 {
      coords -46.845 -1.82 -20.232
@@ -483,13 +462,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_10 {
-     coords -49.906 2.239 10.098
-     angles 0 -47.694 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_11 {
      coords 58.221 3.161 42.023
      angles 0 -174.651 0
@@ -505,7 +477,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_4 {
      coords 56.898 2.407 6.848
      angles 0 -65.094 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_12 {
      coords -9.557 4.05 42.756
@@ -540,13 +512,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_13 {
-     coords -11.672 2.803 -62.368
-     angles 0 -54.504 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_14 {
      coords -39.261 -0.289 71.013
      angles 0 36.216 0
@@ -562,7 +527,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_5 {
      coords 4.186 0.012 9.829
      angles 0 132.402 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_15 {
      coords -42.896 0.405 37.125
@@ -673,13 +638,6 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
      m_iCompanyCallsign 1
      m_iSquadCallsign 1
     }
-    Recon_16 {
-     coords 50.122 0.328 -40.045
-     angles 0 -134.71 0
-     m_eGroupType Recon
-     m_iCompanyCallsign 3
-     m_iSquadCallsign 1
-    }
     Recon_17 {
      coords -66.14 -0.875 13.24
      angles 0 26.592 0
@@ -695,7 +653,7 @@ $grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer
     Commander_6 {
      coords -0.804 0 -6.765
      angles 0 -159.809 0
-     m_eGroupType Command_1
+     m_eGroupType Command_7
     }
     Squad_18 {
      coords 22.471 0.031 -18.102
