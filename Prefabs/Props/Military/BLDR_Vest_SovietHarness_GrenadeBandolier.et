@@ -1,0 +1,14 @@
+GenericEntity : "{41174B59DA65659A}Prefabs/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier.et" {
+ ID "50E0B40D7407B664"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB03D1147687}" {
+   Enabled 1
+  }
+  BaseLoadoutClothComponent "{5242D7267AE8BC4A}" {
+   Enabled 1
+  }
+  ActionsManagerComponent "{51ECC3F9A783908F}" {
+   Enabled 1
+  }
+ }
+}

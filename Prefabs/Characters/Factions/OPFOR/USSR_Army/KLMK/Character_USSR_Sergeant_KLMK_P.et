@@ -1,6 +1,17 @@
 SCR_ChimeraCharacter : "{FC13DAA97D49137F}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_Sergeant_KLMK.et" {
  ID "520EC961A090B1EE"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.et"
+      }
+     }
+    }
+   }
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{EB404DC9E1BCB750}Prefabs/Weapons/Rifles/AK74/Rifle_AK74N_1P29.et"
   }
@@ -25,12 +36,6 @@ SCR_ChimeraCharacter : "{FC13DAA97D49137F}Prefabs/Characters/Factions/OPFOR/USSR
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
      TargetStorage "Jacket/Suit_KLMK.et"
     }
-    ItemsInitConfigurationItem "{5DA0B05D4EF2940A}" {
-     TargetStorage "ArmoredVest/Vest_6B3.et"
-    }
-    ItemsInitConfigurationItem "{5DA0B05D4E3795DB}" {
-     TargetStorage "ArmoredVest/Vest_6B3.et"
-    }
     ItemsInitConfigurationItem "{689E8D71B384265F}" {
      TargetStorage "Jacket/Suit_KLMK.et"
     }
@@ -48,7 +53,13 @@ SCR_ChimeraCharacter : "{FC13DAA97D49137F}Prefabs/Characters/Factions/OPFOR/USSR
     }
     ItemsInitConfigurationItem "{68A08C3946529762}" {
      Enabled 0
-     TargetStorage "Vest/Vest_SovietHarness_rifleman.et/GrenadePouch/Vest_SovietHarness_GrenadePouch.et"
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{5DA0B05D4EF2940A}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{5DA0B05D4E3795DB}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
     }
    }
   }

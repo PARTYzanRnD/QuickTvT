@@ -10004,6 +10004,9 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
 SCR_AIGroup {
  coords 135.388 1 125.203
 }
+SCR_AIGroup : "{01C8B33DB1EEEFCE}Prefabs/Groups/OPFOR/RHS_AFRF/RandomSpawn/Defend/Group_RHS_AFRF_Regular_PL_9_Defend.et" {
+ coords 163.222 1 173.092
+}
 GenericEntity : "{049236750B9D681C}Prefabs/Vehicles/Wheeled/M998/VehParts/M1025_roof_MK19.et" {
  coords 153.723 1 144.793
 }
@@ -10125,6 +10128,9 @@ Vehicle M1025_armed_TOW1 : "{6341E3344D34EA86}Prefabs/Vehicles/Wheeled/M998/M102
 SCR_AIGroup : "{65BEC35F82CE7F7B}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Helirecon_P.et" {
  coords 119.096 1 146.491
 }
+Turret : "{66AF089E5D7FF45D}Prefabs/Vehicles/Static/BaconZU23/BaconZU23_Turret_NotEditable.et" {
+ coords 154.859 1 163.622
+}
 SCR_AIGroup : "{698D0E3F8D362D7B}Prefabs/Groups/OPFOR/KLMK/Group_USSR_Crew_P.et" {
  coords 135.854 1 129.451
 }
@@ -10139,6 +10145,20 @@ SCR_ChimeraCharacter : "{6F42ED2198C9217F}Prefabs/Characters/Factions/BLUFOR/US_
 }
 Turret : "{711E28715D944630}Prefabs/Vehicles/Wheeled/M998/VehParts/Turrets/M1025_GPK_TOW.et" {
  coords 177.336 1 140.708
+}
+SCR_AIGroup : "{776333D51B77AEFE}Prefabs/Groups/OPFOR/RHS_AFRF/RandomSpawn/Attack/Group_RHS_AFRF_Regular_PL_9_Attack.et" {
+ coords 163.505 1 175.958
+ m_aUnitPrefabSlots {
+  "{7551E181CE4C6845}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Officer.et"
+  "{A467DC7A0F007B21}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_SL.et"
+  "{FBD41570B0C083C3}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_MG_Opt.et"
+  "{D90B2AEF04BBE301}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AAT.et"
+  "{FF94BA9A0A4BF4A1}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_MG_opt.et"
+  "{53B49D34137DE9BE}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_AMG.et"
+  "{9B17487B1BB8E272}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Rifle_opt.et"
+  "{1D25ADA8774D4BD2}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Medic.et"
+  "{E4C1E22F77E5DBEF}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/Regular/Char_RHS_AFRF_Regular_Sharpshooter.et"
+ }
 }
 SCR_AIGroup : "{7B9646130855038A}Prefabs/Groups/OPFOR/KLMK/Group_USSR_RifleSquad_PL_5_P.et" {
  coords 117.943 1 171.099
@@ -10257,6 +10277,9 @@ $grp SCR_ChimeraCharacter : "{DBC177C261C93B9D}Prefabs/Characters/Factions/BLUFO
 SCR_AIGroup : "{DDA9792D94497E8A}Prefabs/Groups/BLUFOR/GreenBerets/Suppressed/Group_US_GreenBeret_ReconSquad_P.et" {
  coords 149.926 1.025 150.749
 }
+SCR_ChimeraCharacter : "{DFA2A3CA1EA36572}Prefabs/Characters/Factions/OPFOR/RHS_AFRF/VDV/dim_VDV_Rifleman.et" {
+ coords 162.653 1 177.527
+}
 SCR_ChimeraCharacter : "{E5F836512D78905A}Prefabs/Characters/Factions/OPFOR/USSR_Army/KLMK/Character_USSR_Sergeant_KLMK_P.et" {
  coords 133.86 1 152.326
 }
@@ -10274,6 +10297,19 @@ SCR_AIGroup : "{F8DBC55AD5ED1BDE}Prefabs/Groups/BLUFOR/Group_US_PL_1_p.et" {
 }
 SCR_ChimeraCharacter : "{FA4771514D0D700A}Prefabs/Characters/Factions/BLUFOR/RHS_USAF/RHS_USAF_USMC_MEF/Character_RHS_USAF_USMC_AT.et" {
  coords 147.09 1 143.923
+}
+Vehicle Ural4320_ZU2 : "{FD109F3702AAB393}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23.et" {
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo cannon {
+     Offset 0 -0.4473 -1.2013
+     Prefab "{27468093A238E59B}Prefabs/Vehicles/Wheeled/TIGR/VehParts/Turrets/TIGR_Gun_RWS_Arbalest-DM_AP23.et"
+    }
+   }
+  }
+ }
+ coords 142.595 1 159.271
 }
 GenericEntity : "{FD158EC7FEF3DC28}Prefabs/Vehicles/Wheeled/M998/VehParts/M1025_roof_TOW.et" {
  coords 175.916 1 147.207

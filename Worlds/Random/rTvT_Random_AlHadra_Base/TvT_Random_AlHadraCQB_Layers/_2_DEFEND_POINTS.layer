@@ -1,0 +1,522 @@
+$grp GUB_DefendPointEntity : "{C7CE0DC3D5144B7D}Prefabs/System/MissionRandomizer/DefendPointEntity.et" {
+ DEFEND_DVORSOUTH {
+  coords 4115.323 17.843 4734.575
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORSO"
+  m_sPolyzoneEntityName "Zone_dvorso"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_20 {
+     coords -4.705 -2.273 8.296
+     angles 0 177.141 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_21 {
+     coords 5.829 -2.448 3.659
+     angles 0 -168.957 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_8 {
+     coords 2.005 -5.655 -3.594
+     angles 0 1.748 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_8 {
+     coords 16.657 -3.388 -4.332
+     angles 0 3.994 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_8 {
+     coords 29.992 -2.17 -6.35
+     angles 0 10.19 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_22 {
+     coords -4.907 -2.552 -10.738
+     angles 0 8.469 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   PolylineShapeEntity Zone_dvorso : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -23.734 0 -3.654
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 32.129 0 -171.916
+     }
+     ShapePoint "{69AC8D57A0DB639C}" {
+      Position -93.546 0 -39.515
+     }
+     ShapePoint "{69AC8D5795CC256D}" {
+      Position 80.039 0 108.867
+     }
+     ShapePoint "{69AC8D5797CB5E9B}" {
+      Position 195.641 0 -18.716
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORWEST {
+  coords 3995.187 16.899 4781.427
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORWEST"
+  m_sPolyzoneEntityName "Zone_dvorwest"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_23 {
+     coords 14.504 -2.236 -11.924
+     angles 0 48.339 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_24 {
+     coords 18.494 5.237 5.431
+     angles 0 137.268 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_9 {
+     coords -16.436 -4.238 -27.214
+     angles 0 -42.949 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_9 {
+     coords -3.441 -3.388 -16.558
+     angles 0 -41.794 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_9 {
+     coords 26.967 -2.171 -16.836
+     angles 0 -22.251 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_25 {
+     coords 36.652 -2.552 0.364
+     angles 0 -136.48 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   PolylineShapeEntity Zone_dvorwest : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -7.69 0.945 -8.667
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 11.091 0 -81.563
+     }
+     ShapePoint "{69AC8D54FED5321C}" {
+      Position -62.276 0 -5.232
+     }
+     ShapePoint "{69AC8D54F8AE14BF}" {
+      Position 35.039 0 81.67
+     }
+     ShapePoint "{69AC8D54E52F3070}" {
+      Position 104.462 0 3.921
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_RUINS {
+  coords 4116.213 17.977 4954.222
+  angles 0 0 0
+  m_sFlagName "FLAG_RUINS"
+  m_sPolyzoneEntityName "Zone_ruins"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_26 {
+     coords 6.595 -2.237 -3.327
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_27 {
+     coords -4.433 0.893 -15.408
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_10 {
+     coords -23.563 -4.747 -20.116
+     angles 0 52.484 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_10 {
+     coords -8.231 -4.238 -36.548
+     angles 0 52.843 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_10 {
+     coords 5.139 -1.986 -50.979
+     angles 0 48.56 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_28 {
+     coords -3.157 -1.411 -30.859
+     angles 0 44.979 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   PolylineShapeEntity Zone_ruins : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -10.898 -0.133 -24.781
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position -155.609 0 12.216
+     }
+     ShapePoint "{69AC8D53ED2F9A31}" {
+      Position 11.891 0 161.58
+     }
+     ShapePoint "{69AC8D53EE9B517E}" {
+      Position 153.71 0 -0.479
+     }
+     ShapePoint "{69AC8D53EBC9F0EB}" {
+      Position -7.762 0 -148.057
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORNO {
+  coords 4394.207 17.841 4954.479
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORNO"
+  m_sPolyzoneEntityName "Zone_dvorno"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_29 {
+     coords 6.595 -2.237 -3.327
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_30 {
+     coords -0.487 -0.626 3.436
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_11 {
+     coords -19.15 -4.746 23.64
+     angles 0 -11.023 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_11 {
+     coords -1.107 -4.238 13.691
+     angles 0 47.905 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_11 {
+     coords 12.246 -1.982 0.161
+     angles 0 48.56 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_31 {
+     coords -10.842 -1.411 9.577
+     angles 0 134.923 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   PolylineShapeEntity Zone_dvorno : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -2.17 0.004 -6.76
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 143.09 0 -4.181
+     }
+     ShapePoint "{69AC8D5359C6EE1E}" {
+      Position -6.098 0 -143.369
+     }
+     ShapePoint "{69AC8D53462D2206}" {
+      Position -191.061 0 63.793
+     }
+     ShapePoint "{69AC8D5340697C56}" {
+      Position -43.497 0 195.387
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+ DEFEND_DVORMAR {
+  coords 4270.292 20.977 4829.282
+  angles 0 0 0
+  m_sFlagName "FLAG_DVORMAR"
+  m_sPolyzoneEntityName "Zone_dvormar"
+  {
+   $grp GUB_SpawnPointEntity : "{0DCCBC83322A0A0D}Prefabs/System/MissionRandomizer/SpawnPointEntity.et" {
+    Squad_32 {
+     coords -17.083 -2.109 26.24
+     angles 0 140.005 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+    }
+    Squad_33 {
+     coords -34.697 -0.499 12.194
+     angles 0 136.405 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 1
+    }
+    Recon_12 {
+     coords -38.744 -4.589 -0.866
+     angles 0 -37.841 0
+     m_eGroupType Recon
+     m_iCompanyCallsign 3
+     m_iSquadCallsign 1
+    }
+    Motorized_12 {
+     coords -16.431 -4.408 17.669
+     angles 0 -40.659 0
+     m_eGroupType Motorized
+     m_iCompanyCallsign 2
+    }
+    Commander_12 {
+     coords -7.086 -3.576 25.584
+     angles 0 -42.873 0
+     m_eGroupType Command_7
+     m_iCompanyCallsign 1
+    }
+    Squad_34 {
+     coords -21.333 -1.454 11.275
+     angles 0 134.923 0
+     m_iCompanyCallsign 1
+     m_iPlatoonCallsign 1
+     m_iSquadCallsign 2
+    }
+   }
+   PolylineShapeEntity Zone_dvormar : "{BD11B8FAA469D169}Prefabs/PolyZone/PolyZone.et" {
+    components {
+     PS_PolyZone "{60E90266F25533F6}" {
+      m_mPolygonTexture "{928B4092981F27CB}UI/layouts/Textures/Zone.edds"
+      m_cPolygonColor 1 1 1 0
+      m_fPolygonUVScale 0.44
+      m_mPolygonTextureBorder "{CA01D453D39FB430}UI/layouts/Textures/ZoneBorder.edds"
+      m_cPolygonBorderColor 0 0 0 0.784
+      m_fPolygonBorderWidth 5
+      m_bLineMode 0
+      m_aVisibleForFactions {
+       ""
+      }
+      m_aHideOnGameModeStates {
+       PREGAME
+       SLOTSELECTION
+      }
+     }
+    }
+    coords -39.567 -3.133 0.882
+    Points {
+     ShapePoint "{60E90266E922A02A}" {
+      Position 71.691 0 -139.523
+     }
+     ShapePoint "{69AC98018269BDB3}" {
+      Position -67.636 0 14.509
+     }
+     ShapePoint "{69AC98018E9571F5}" {
+      Position 36.563 0 106.562
+     }
+     ShapePoint "{69AC98018A4DBE0D}" {
+      Position 174.997 0 -46.027
+     }
+    }
+    {
+     PS_PolyZoneTrigger {
+      components {
+       Hierarchy "{60FD050E7DB5D4B9}" {
+       }
+      }
+      coords 44.315 -9.311 -46.774
+      TriggerShapeType Sphere
+      SphereRadius 999999
+      TriggerActivationType "All changes"
+      PeriodicQueries 1
+      ClassesFilter {
+       "SCR_ChimeraCharacter"
+      }
+      m_polyZoneEffect PS_PolyZoneEffectRestricted "{60FD050E0DC2A2AB}" {
+       m_fKillTime 30
+      }
+      m_bReversed 1
+     }
+    }
+   }
+  }
+ }
+}

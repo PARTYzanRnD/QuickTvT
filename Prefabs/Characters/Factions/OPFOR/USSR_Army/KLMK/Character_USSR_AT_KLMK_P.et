@@ -16,6 +16,18 @@ SCR_ChimeraCharacter : "{9A12B3F6ABDF70BE}Prefabs/Characters/Factions/OPFOR/USSR
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
      TargetStorage "ArmoredVest/Vest_6B3.et"
     }
+    ItemsInitConfigurationItem "{689E8D71B384265F}" {
+     TargetStorage "Jacket/Suit_KLMK.et"
+    }
+    ItemsInitConfigurationItem "{689E8D724D1D62D8}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{68A08C39AF9DAB67}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
+    ItemsInitConfigurationItem "{68A08C3946529762}" {
+     TargetStorage "ArmoredVest/Vest_6B3.et"
+    }
     ItemsInitConfigurationItem "{54A68D62A0B36F76}" {
      TargetStorage "ArmoredVest/Vest_6B3.et"
     }

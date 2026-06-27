@@ -1,0 +1,15 @@
+GameEntity : "{67AD477577B7BFF2}Prefabs/Characters/Vests/Vest_6B3/Vest_6B3_base.et" {
+ ID "50D8C49B3558F152"
+ components {
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   Slots {
+    LoadoutSlotInfo Bayonet {
+     Offset 0.1923 0 -0.0511
+     Prefab "{6B9716BE3D30B719}Prefabs/Items/Equipment/Accessories/Scabbard_Bayonet_6Kh4/Scabbard_Bayonet_6Kh4_GP.et"
+     DeflatedOffset -0.0324 -1.0422 -0.0669
+     DeflatedAngles 4.593 172.8381 0
+    }
+   }
+  }
+ }
+}

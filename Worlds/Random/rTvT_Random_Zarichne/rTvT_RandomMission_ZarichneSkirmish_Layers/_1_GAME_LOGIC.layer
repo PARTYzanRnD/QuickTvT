@@ -38,9 +38,9 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
       "USSR"
      }
     }
-    GUB_FactionPrefab "{696B32A1FDBE3F41}" : "{192C9DAB2B09B7F7}Configs/RandomPrefabConfig_US.conf" {
+    GUB_FactionPrefab "{696B32A1FDBE3F41}" : "{71C737B0A5A7D2DA}Configs/RandomPrefabConfig_USMCO.conf" {
     }
-    GUB_FactionPrefab "{696B32A1E711A750}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+    GUB_FactionPrefab "{696B32A1E711A750}" : "{BC80CCA8960E793D}Configs/RandomPrefabConfig_USSRK.conf" {
     }
    }
    m_fMinDistanceBetweenLocations 1050

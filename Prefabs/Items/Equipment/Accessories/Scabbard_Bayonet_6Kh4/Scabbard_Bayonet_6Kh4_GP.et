@@ -1,0 +1,18 @@
+GenericEntity : "{5490FDEE87450C53}Prefabs/Items/Equipment/Accessories/Scabbard_Bayonet_6Kh4/Scabbard_Bayonet_6Kh4_base.et" {
+ ID "521AC044AB19DB9B"
+ components {
+  BaseSlotComponent "{5490F566AE983A68}" {
+   AttachType EntitySlotInfo "{5490F566A225BB5F}" {
+    Prefab "{98C79F5FAE12F9B6}Prefabs/Weapons/Attachments/Bayonets/Bayonet_6Kh4.et"
+    DeactivatePhysicsOnAtaching 1
+   }
+  }
+  MeshObject "{521AC04910AB9941}" {
+   Object "{52255201326AA0FB}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier_Item.xob"
+  }
+  BaseLoadoutClothComponent "{521AC04910AB9954}" {
+   WornModel "{E159F5DD3309318C}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier.xob"
+   ItemModel "{52255201326AA0FB}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier_Item.xob"
+  }
+ }
+}

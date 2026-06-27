@@ -42,10 +42,10 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     m_iCompanyCallsign 3
     m_iSquadCallsign 2
    }
-   HELICOPTER_ATTACK_1 {
+   Helicopter_Transport_1 {
     coords 617.408 -10.538 -1358.147
     angles 0 -14.172 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -61,10 +61,10 @@ $grp GUB_AttackPointEntity : "{515A2B3BE5819F70}Prefabs/System/MissionRandomizer
     m_iCompanyCallsign 2
     m_iSquadCallsign 2
    }
-   HELICOPTER_ATTACK_17 {
+   Helicopter_Transport_17 {
     coords 1891.97 4.775 -94.986
     angles 0 42.111 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
     m_iSquadCallsign 1
@@ -528,7 +528,7 @@ ATTACK_LEVIE {
    HELI_ATTACK_5 {
     coords -40.352 4.372 -77.023
     angles 0 106.155 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -671,7 +671,7 @@ ATTACK_CAMURAC {
    HELI_ATTACK_2 {
     coords -12.905 -1.297 -6.907
     angles 0 103.119 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -801,7 +801,7 @@ ATTACK_ALDERPOND {
    HELI_ATTACK_3 {
     coords -77.256 -0.529 -39.94
     angles 0 27.365 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -1197,7 +1197,7 @@ ATTACK_GOREY {
    HELI_ATTACK_6 {
     coords -62.711 -10.024 -7.777
     angles 0 -74.409 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -1471,7 +1471,7 @@ ATTACK_ETOUPE {
    HELI_ATTACK_4 {
     coords -61.017 2.272 59.314
     angles 0 -88.026 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -1744,7 +1744,7 @@ ATTACK_PINEWOODLAKE {
    HELI_ATTACK_7 {
     coords -55.296 1.906 22.331
     angles 0 -11.133 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }
@@ -1888,7 +1888,7 @@ ATTACK_TILLERSFIND {
    HELI_ATTACK_8 {
     coords -18.905 -0.21 -50.062
     angles 0 -11.133 0
-    m_eGroupType Helicopter_Attack
+    m_eGroupType Helicopter_Transport
     m_iCompanyCallsign 4
     m_iPlatoonCallsign 1
    }

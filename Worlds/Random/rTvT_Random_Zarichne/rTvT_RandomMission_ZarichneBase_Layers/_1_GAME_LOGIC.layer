@@ -28,13 +28,13 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
     }
     GUB_FactionPrefab "{694ACE343B492972}" : "{AAA83BB78384B5D7}Configs/RandomPrefabConfig_UK89.conf" {
     }
-    GUB_FactionPrefab "{694ACE3426B5EB8F}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+    GUB_FactionPrefab "{694ACE3426B5EB8F}" : "{BC80CCA8960E793D}Configs/RandomPrefabConfig_USSRK.conf" {
      m_aEnemyFactionKeys {
       "UK"
       "US"
      }
     }
-    GUB_FactionPrefab "{6972CAA8D0A1FE9D}" : "{192C9DAB2B09B7F7}Configs/RandomPrefabConfig_US.conf" {
+    GUB_FactionPrefab "{6972CAA8D0A1FE9D}" : "{71C737B0A5A7D2DA}Configs/RandomPrefabConfig_USMCO.conf" {
     }
    }
    m_fMinDistanceBetweenLocations 1050

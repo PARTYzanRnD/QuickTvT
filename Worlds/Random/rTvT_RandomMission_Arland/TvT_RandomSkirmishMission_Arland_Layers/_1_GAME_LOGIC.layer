@@ -1,7 +1,6 @@
 GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_RandomizeMissionPrefab.et" {
  components {
   GUB_RandomizeLossesComponent "{68DEB995D025C63E}" {
-   
    m_sMessageDefendWin "Атака понесла критические потери! Победа обороны!"
    m_sMessageAttackWin "Оборона понесла критические потери, Победа Атаки!"
    m_aObjectiveNames {
@@ -31,9 +30,11 @@ GenericEntity : "{574B8B93E7DDD76D}Prefabs/System/MissionRandomizer/GUB_Randomiz
       "RHS_ION"
      }
     }
-    GUB_FactionPrefab "{68C296C46764C846}" : "{2162A515C1EDE618}Configs/RandomPrefabConfig_USSR.conf" {
+    GUB_FactionPrefab "{68C296C46764C846}" : "{BC80CCA8960E793D}Configs/RandomPrefabConfig_USSRK.conf" {
     }
     GUB_FactionPrefab "{68C296D108D7E037}" : "{AAA83BB78384B5D7}Configs/RandomPrefabConfig_UK89.conf" {
+    }
+    GUB_FactionPrefab "{69B6AE9E15AC1F5B}" : "{71C737B0A5A7D2DA}Configs/RandomPrefabConfig_USMCO.conf" {
     }
     GUB_FactionPrefab "{694ACE0DE24EFC65}" : "{31104B51D0C52C75}Configs/RandomPrefabConfig_PMC.conf" {
      m_aEnemyFactionKeys {

@@ -1,0 +1,62 @@
+GenericEntity : "{9071E75706E55A5A}Prefabs/Items/Core/Canteen_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Item_CanteenSoviet_Name"
+     Description "#AR-Item_CanteenSoviet_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.4
+     SizeSetupStrategy Manual
+     ItemDimensions 15 15 15
+     ItemVolume 1000
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{69B6AE934E65A96A}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{69B6AE934E65A6F7}" {
+       AnimGraph "{EF07EC7363F36857}Assets/Items/Equipment/workspaces/Canteen_Soviet.agr"
+       AnimInstance "{55B4A4B176A079F3}Assets/Items/Equipment/workspaces/Canteen_Soviet_player.asi"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{69B6AE934E65A6FA}" {
+      CameraPreset Front
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 1.5
+      FOV 10
+     }
+    }
+   }
+  }
+  MeshObject "{685AB1F8F9A7EBD0}" {
+   Object "{52255201326AA0FB}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier_Item.xob"
+  }
+  RigidBody "{685AB1F8F9A7EBDE}" {
+   Mass 3
+   LinearDamping 0.5
+   AngularDamping 0.5
+   AngularSleepingThreashold 1
+  }
+  BaseLoadoutClothComponent "{685AB1F8F9A7EBD9}" {
+   Animate 1
+   WornModel "{E159F5DD3309318C}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier.xob"
+   ItemModel "{52255201326AA0FB}Assets/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_GrenadeBandolier_Item.xob"
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.1 0
+     }
+    }
+   }
+  }
+  GadgetAnimationComponent "{685AB1F8F9A7EBA5}" {
+   AnimGraph "{EF07EC7363F36857}Assets/Items/Equipment/workspaces/Canteen_Soviet.agr"
+   AnimInstance "{ABDC96276E6D4BA7}Assets/Items/Equipment/workspaces/Canteen_Soviet_item.asi"
+  }
+ }
+}
