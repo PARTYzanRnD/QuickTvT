@@ -1,24 +1,41 @@
 modded class PS_SpectatorMenu
 {
 	protected TextWidget m_StepTimerText;
-	
 	protected PS_GameModeQuickTvT m_GameModeQuick;
 	
 	override void OnMenuOpen()
 	{
 		super.OnMenuOpen();
 		
-		m_StepTimerText = TextWidget.Cast(GetRootWidget().FindAnyWidget("StepTimerText"));
 		m_GameModeQuick = PS_GameModeQuickTvT.Cast(GetGame().GetGameMode());
+		if (!m_GameModeQuick)
+			return;
+		
+		m_StepTimerText = TextWidget.Cast(GetRootWidget().FindAnyWidget("StepTimerText"));
+		if (!m_StepTimerText)
+			return;
+		
 		GetGame().GetCallqueue().CallLater(UpdateTimer, 0, true);
 		UpdateTimer();
 	}
 	
+	override void OnMenuClose()
+	{
+		super.OnMenuClose();
+		GetGame().GetCallqueue().Remove(UpdateTimer);
+	}
+	
 	void UpdateTimer()
 	{
+		if (!m_GameModeQuick || !m_StepTimerText)
+		{
+			GetGame().GetCallqueue().Remove(UpdateTimer);
+			return;
+		}
+		
 		int time = m_GameModeQuick.GetStepTime() + 999;
 		
-		int seconds = time/1000;
+		int seconds = time / 1000;
 		int minutes = seconds / 60;
 		seconds = Math.Mod(seconds, 60);
 		
