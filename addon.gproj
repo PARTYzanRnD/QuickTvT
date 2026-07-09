@@ -3,7 +3,7 @@ GameProject {
  GUID "68ECD9266807802E"
  TITLE "QuickTvT_Comunity"
  Dependencies {
-  "58D0FB3206B6F859" "5EAF2B0473DB5A99"
+  "58D0FB3206B6F859" "5EAF2B0473DB5A99" "7777777777777774"
  }
  Configurations {
   GameProjectConfig PC {
